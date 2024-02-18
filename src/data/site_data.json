@@ -1,0 +1,44 @@
+{
+    "about": "Welcome to my portfolio. I am a passionate web developer...",
+    "skills": [
+        {
+        "name": "HTML",
+        "level": "Advanced"
+      },
+      {
+        "name": "CSS",
+        "level": "Advanced"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Advanced"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Project 1",
+        "description": "Description of project 1...",
+        "image": "path/to/project1-image.png",
+      },
+
+      {
+        "title": "Project 2",
+        "description": "Description of project 2...",
+        "image": "path/to/project2-image.png",
+
+      }
+    ],
+    "highlightedProjects": [
+      {
+        "title": "Highlighted Project 1",
+        "description": "Description of highlighted project 1...",
+        "image": "path/to/highlighted-project1-image.png",
+      },
+
+      {
+        "title": "Highlighted Project 2",
+        "description": "Description of highlighted project 2...",
+        "image": "path/to/highlighted-project2-image.png",
+      }
+    ]
+}
