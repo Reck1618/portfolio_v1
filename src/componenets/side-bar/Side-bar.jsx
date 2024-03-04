@@ -1,5 +1,6 @@
 import { TbBrandGithub } from "react-icons/tb";
-import { FaXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+import { FiLinkedin } from "react-icons/fi";
+import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { socials } from "../../utils/data";
 import './Side-bar.css'
 
@@ -11,7 +12,7 @@ const SideBar = () => {
                 <span><TbBrandGithub /></span>
             </a>
             <a href={socials.Linkedin} target='_blank'>
-                <span><FaLinkedinIn /></span>
+                <span><FiLinkedin /></span>
             </a>
             <a href={socials.Instagram} target='_blank'>
                 <span><FaInstagram /></span>

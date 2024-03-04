@@ -5,9 +5,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    position: fixed;
-    gap: 1rem;
-    padding: 0 32px;
+    /* position: fixed; */
+    gap: 1.2rem;
+    padding: 0 48px;
 }
 
 .sidebar-container .sidebar-icons {
@@ -19,7 +19,7 @@
 
 .sidebar-container .sidebar-icons a {
     text-decoration: none;
-    color: var(--text-1);
+    color: var(--lightest-slate);
 }
 
 .sidebar-container .sidebar-icons a span {
@@ -36,11 +36,12 @@
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
     color: var(--bg-2);
+    /* background-color: var(--green); */
     background-color: var(--text-1);
 }
 
 .sidebar-container .sidebar-line {
     width: 2px;
-    height: 164px;
-    background-color: var(--text-3);
+    height: 128px;
+    background-color: var(--slate);
 }
