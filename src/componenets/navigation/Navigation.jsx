@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import Projects from '../projects/Projects';
 import './Navigation.css';
+
 
 const Navigation = () => {
     const [activeNavItem, setActiveNavItem] = useState('About');
@@ -34,10 +36,7 @@ const Navigation = () => {
                 );
             case 'Projects':
                 return (
-                    <section>
-                        <h1>Projects</h1>
-                        <p>Projects content goes here...</p>
-                    </section>
+                    <Projects />
                 );
             case 'Contact':
                 return (
