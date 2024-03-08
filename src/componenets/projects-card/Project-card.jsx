@@ -8,17 +8,18 @@ const ProjectCard = ({ project }) => {
 
     return (
         <div className='project-card'>
-            <div className='project-image'>
+            {/* <div className='project-image'>
                 <img src={image} alt={name} />
-            </div>
+            </div> */}
 
             <div className='project-content'>
                 <div className='project-heading'>
                     <h3>{name}</h3>
-                    <div>
-                        <a href={url} target="_blank" rel="noreferrer">View Project</a>
-                        <a href={url} target="_blank" rel="noreferrer">View Project</a>
-                    </div>
+                </div>
+
+                <div className='project-links'>
+                    <a href={url} target="_blank" rel="noreferrer">View Project</a>
+                    <a href={url} target="_blank" rel="noreferrer">View Project</a>
                 </div>
 
                 <div className='project-description'>

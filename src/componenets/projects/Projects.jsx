@@ -24,17 +24,19 @@ const Projects = () => {
         }, 200); // Adjust the duration to match the animation duration
     };
     return (
-        <section className='projects-section'>
-            <div className={`projects-container ${isAnimating ? 'fade-out' : 'fade-in'}`}>
-                {projectsData.slice(startIndex, startIndex + 2).map((project, index) => (
-                        <ProjectCard key={index} project={project} />
-                    ))}
-            </div>
+        <>
+            <section className='projects-section'>
+                <div className={`projects-container ${isAnimating ? 'fade-out' : 'fade-in'}`}>
+                    {projectsData.slice(startIndex, startIndex + 2).map((project, index) => (
+                            <ProjectCard key={index} project={project} />
+                        ))}
+                </div>
+            </section>
             <div className="controls">
                 <button onClick={handlePrev} disabled={startIndex === 0}>Prev</button>
                 <button onClick={handleNext} disabled={startIndex >= projectsData.length - 2}>Next</button>
             </div>
-        </section>
+        </>
     );
 };
 
