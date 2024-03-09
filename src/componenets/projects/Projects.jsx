@@ -23,18 +23,27 @@ const Projects = () => {
             setIsAnimating(false);
         }, 200); // Adjust the duration to match the animation duration
     };
+
+    // Calculate the number of pages
+    const numPages = Math.ceil(projectsData.length / 2);
+
+    // Generate dots for each page
+    const dots = [];
+    for (let i = 0; i < numPages; i++) {
+        dots.push(<div key={i} className={`dot ${i === startIndex / 2 ? 'active' : ''}`} />);
+    }
+
     return (
         <>
-            <section className='projects-section'>
-                <div className={`projects-container ${isAnimating ? 'fade-out' : 'fade-in'}`}>
-                    {projectsData.slice(startIndex, startIndex + 2).map((project, index) => (
-                            <ProjectCard key={index} project={project} />
-                        ))}
-                </div>
-            </section>
+            <div className={`projects-container ${isAnimating ? 'fade-out' : 'fade-in'}`}>
+                {projectsData.slice(startIndex, startIndex + 2).map((project, index) => (
+                        <ProjectCard key={index} project={project} />
+                    ))}
+            </div>
             <div className="controls">
-                <button onClick={handlePrev} disabled={startIndex === 0}>Prev</button>
-                <button onClick={handleNext} disabled={startIndex >= projectsData.length - 2}>Next</button>
+                <div className='control-button' onClick={handlePrev}>&#8249;</div>
+                <div className='control-dots'>{dots}</div>
+                <div className='control-button' onClick={handleNext}>&#8250;</div>
             </div>
         </>
     );

@@ -1,33 +1,76 @@
-.projects-section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 500px;
-    justify-content: center;
-    align-items: center;
-}
 .projects-container {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
-    gap: 1rem;
-    padding: 0 2rem;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    color: var(--lightest-slate);
+    margin-top: 2%;
 }
 
-.projects-section .controls {
+.controls {
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 10%;
+    margin-top: 2%;
+    cursor: pointer;
+    color: var(--light-slate);
+}
+
+.control-button {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+    font-size: 25px;
+    font-weight: 600;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: var(--bg-2);
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.control-button:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    color: var(--bg-2);
+    background-color: var(--lightest-slate);
+}
+
+.control-button:active {
+    transition: all 0.1s ease-in-out !important;
+    background-color: var(--bg-2) !important;
+    color: var(--lightest-slate) !important;
+    border: 3px solid var(--lightest-slate) !important;
+}
+
+.control-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
 }
+
+.dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: var(--slate);
+    margin: 0 10px;
+}
+
+.dot.active {
+    transform: scale(1.5);
+    transition: all 0.3s ease-in-out;
+    background-color: var(--lightest-slate);
+}
+
 
 @keyframes fadeOut {
     from {
@@ -48,10 +91,9 @@
 }
 
 .projects-container.fade-out {
-    animation: fadeOut 0.2s ease forwards;
+    animation: fadeOut 0.3s ease forwards;
 }
 
 .projects-container.fade-in {
-    animation: fadeIn 0.2s ease forwards;
+    animation: fadeIn 0.3s ease forwards;
 }
-
