@@ -35,7 +35,7 @@
 }
 
 .nav-container-items li:hover {
-    color: var(--light-slate);
+    color: var(--green);
     cursor: pointer;
 }
 

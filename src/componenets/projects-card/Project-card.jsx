@@ -9,8 +9,7 @@ const ProjectCard = ({ project }) => {
     const {name, image, description, live, url, skills} = project;
 
     return (
-        <div className='project-card'>
-            <img className='project-image' src={image} alt={name} />
+        <div className='project-card' style={{ backgroundImage: `url(${image})` }}>
 
             <div className='project-content'>
                 <div className='project-links'>

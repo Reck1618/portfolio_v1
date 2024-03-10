@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { TbBrandGithub } from "react-icons/tb";
 import { FiLinkedin } from "react-icons/fi";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
@@ -27,9 +28,15 @@ const socialIcons = {
 
 const SideBar = () => {
     return (
-        <div className='sidebar-container'>
+        <motion.div
+            initial={{ y: '50vw' }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className='sidebar-container'
+        >
+
             <div className='sidebar-icons'>
-            {Object.keys(socialIcons).map((name, index) => (
+                {Object.keys(socialIcons).map((name, index) => (
                     <LinkIcon
                         key={index}
                         icon={socialIcons[name].icon}
@@ -38,7 +45,7 @@ const SideBar = () => {
                 ))}
             </div>
             <div className='sidebar-line'></div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Projects from '../projects/Projects';
+import About from '../about/About';
 import './Navigation.css';
 
 
@@ -15,10 +17,7 @@ const Navigation = () => {
         switch (activeNavItem) {
             case 'About':
                 return (
-                    <section>
-                        <h1>About</h1>
-                        <p>About content goes here...</p>
-                    </section>
+                    <About />
                 );
             case 'Skills':
                 return (
@@ -60,14 +59,19 @@ const Navigation = () => {
     return (
         <section id='main-content'>
             <nav className='nav-container'>
-                <ul className="nav-container-items">
+                <motion.ul
+                    initial={{ y: '-50vw' }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3}}
+                    className="nav-container-items"
+                    >
                     <li onClick={() => handleNavItemClick('About')} className={activeNavItem === 'About' ? 'active' : ''}>About</li>
                     <li onClick={() => handleNavItemClick('Skills')} className={activeNavItem === 'Skills' ? 'active' : ''}>Skills</li>
                     <li onClick={() => handleNavItemClick('Experience')} className={activeNavItem === 'Experience' ? 'active' : ''}>Experience</li>
                     <li onClick={() => handleNavItemClick('Projects')} className={activeNavItem === 'Projects' ? 'active' : ''}>Projects</li>
                     <li onClick={() => handleNavItemClick('Contact')} className={activeNavItem === 'Contact' ? 'active' : ''}>Contact</li>
                     <li onClick={() => handleNavItemClick('Resume')} className={activeNavItem === 'Resume' ? 'active' : ''}>Resume</li>
-                </ul>
+                </motion.ul>
             </nav>
             <main>
                 {renderComponent()}

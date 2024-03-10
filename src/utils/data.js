@@ -7,6 +7,18 @@ export const socials = {
     X: 'https://twitter.com/RitikTy86346533'
 }
 
+export const profileInfo = {
+    name: "Ritik Tyagi",
+    role: "Fullstack Developer",
+    greeting: "Hi! my name is",
+    description: `A passionate full-stack web developer with a strong inclination towards backend technologies.
+                My expertise lies in crafting scalable and efficient solutions that power dynamic web applications.
+
+                I thrive on diving deep into the intricacies of software development, constantly seeking out new technologies and methodologies to enhance my skills and stay ahead of the curve.`,
+    email: ""
+};
+
+
 export const projectsData = [
     {
         name: "Project 1",

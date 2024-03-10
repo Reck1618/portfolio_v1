@@ -35,8 +35,8 @@
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
     color: var(--bg-2);
-    /* background-color: var(--green); */
-    background-color: var(--lightest-slate);
+    background-color: var(--green);
+    /* background-color: var(--lightest-slate); */
 }
 
 .sidebar-container .sidebar-line {
