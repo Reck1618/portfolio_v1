@@ -16,7 +16,7 @@
 
 .nav-container-items {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     flex-direction: column;
     color: var(--slate);
     font-size: 36px;
