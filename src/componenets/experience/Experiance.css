@@ -4,9 +4,10 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    width: 80%;
+    width:80%;
     margin: auto;
     color: var(--slate);
+    margin-top: 8%;
 }
 
 .experiance-list {
@@ -19,7 +20,7 @@
     column-gap: var(--col-gap);
     list-style: none;
     width: min(60rem, 90%);
-    margin-inline: auto;
+    margin:0;
   }
 
   /* line */
@@ -82,7 +83,7 @@
 
 
 
-  @media (min-width: 40rem) {
+  @media (min-width: 60rem) {
     .experiance-list {
       grid-template-columns: 1fr var(--line-w) 1fr;
     }
