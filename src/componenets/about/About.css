@@ -9,6 +9,10 @@
     color: var(--slate);
 }
 
+.highlight-text {
+    color: var(--green) !important;
+}
+
 .about-container  p {
     /* font-size: 1.5rem; */
     margin: 0;

@@ -4,10 +4,6 @@ import './About.css'
 
 
 const About = () => {
-    const descriptionLines = profileInfo.description.split('\n').map((line, index) => (
-        <span key={index}>{line}<br /></span>
-    ));
-
 
     return (
         <div className='about-container'>
@@ -34,7 +30,9 @@ const About = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.7 }}
             >
-                {descriptionLines}
+                A passionate <span className='highlight-text'>full-stack developer</span> with a strong inclination towards backend technologies.<br />
+                My expertise lies in crafting scalable and efficient solutions that power dynamic web applications.<br /> <br />
+                I thrive on diving deep into the intricacies of software development, constantly seeking out new technologies and methodologies to enhance my skills and stay ahead of the curve.
             </motion.span>
         </div>
     );

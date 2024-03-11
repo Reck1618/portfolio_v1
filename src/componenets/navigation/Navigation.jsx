@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Projects from '../projects/Projects';
 import About from '../about/About';
+import Experiance from '../experience/Experiance';
 import './Navigation.css';
 
 
@@ -28,10 +29,7 @@ const Navigation = () => {
                 );
             case 'Experience':
                 return (
-                    <section>
-                        <h1>Experience</h1>
-                        <p>Experience content goes here...</p>
-                    </section>
+                    <Experiance />
                 );
             case 'Projects':
                 return (
