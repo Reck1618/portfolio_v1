@@ -13,7 +13,6 @@ const Navigation = () => {
         setActiveNavItem(item);
     };
 
-    // Function to render the component based on the active nav item
     const renderComponent = () => {
         switch (activeNavItem) {
             case 'About':

@@ -14,6 +14,20 @@ export const profileInfo = {
     email: ""
 };
 
+export const experianceData = [
+    {
+        title: 'Associate Software Engineer',
+        company: 'Mindfire Digital',
+        duration: '2022-Present',
+        responsibilities: ['first line of responsibilities', 'second line of responsibilities', 'third line of responsibilities']
+    },
+    {
+        title: 'Intern',
+        company: 'Mindfire Digital',
+        duration: '2022',
+        responsibilities: ['first line of responsibilities', 'second line of responsibilities', 'third line of responsibilities']
+    }
+]
 
 export const projectsData = [
     {
