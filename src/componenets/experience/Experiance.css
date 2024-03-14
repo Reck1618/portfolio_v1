@@ -18,6 +18,7 @@
 .experiance-resp {
   margin: 0 !important;
 }
+
 .experiance-list {
   --col-gap: 2rem;
   --row-gap: 2rem;
@@ -89,7 +90,10 @@
   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
-
+.experiance-resp {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 @media (min-width: 60rem) {
   .experiance-list {

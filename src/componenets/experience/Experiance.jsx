@@ -13,7 +13,7 @@ const Experiance = () => {
                                 <span>{ experiance.title }</span>
                                 <span>{ experiance.company }</span>
                                 <span>{ experiance.duration }</span>
-                                <ul>
+                                <ul className='experiance-resp'>
                                     {experiance.responsibilities.map((responsibility, index) => {
                                         return (
                                             <li className='experiance-resp' key={index}>{responsibility}</li>
