@@ -4,28 +4,43 @@ import "./Experiance.css";
 
 const Experiance = () => {
 	return (
-		<div className="experiance-container">
+		<motion.div
+		initial={{ opacity: 0 }}
+		animate={{ opacity: 1 }}
+		transition={{ duration: 0.5, delay: 0.3 }}
+		className="experiance-container">
 			<ul className="experiance-list">
 				{experianceData.map((experiance, index) => {
 					return (
 						<li key={index}>
 							<div className="content">
-								<span className="experiance-title">{experiance.title}</span>
+								<motion.span
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ duration: 0.5, delay: 0.3 }}
+								className="experiance-title">{experiance.title}</motion.span>
 
-								<span className="experiance-company">
+								<motion.span
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ duration: 0.5, delay: 0.5 }}
+										className="experiance-company">
 									<div>{experiance.company}</div>
                                     <div>{experiance.duration}</div>
-								</span>
-								<span className="experiance-description">
+								</motion.span>
+								<motion.span
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										transition={{ duration: 0.5, delay: 0.7 }}
+								className="experiance-description">
 									{ experiance.description }
-								</span>
-								{/* <div><span>see more</span></div> */}
+								</motion.span>
 							</div>
 						</li>
 					);
 				})}
 			</ul>
-		</div>
+		</motion.div>
 	);
 };
 
