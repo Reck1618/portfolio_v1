@@ -1,4 +1,5 @@
 import { experianceData } from "../../utils/data";
+import { motion } from 'framer-motion';
 import "./Experiance.css";
 
 const Experiance = () => {
@@ -9,21 +10,16 @@ const Experiance = () => {
 					return (
 						<li key={index}>
 							<div className="content">
-								<span className="experiance-content">{experiance.title}</span>
+								<span className="experiance-title">{experiance.title}</span>
 
 								<span className="experiance-company">
-									<div>{experiance.company}</div> 
+									<div>{experiance.company}</div>
                                     <div>{experiance.duration}</div>
 								</span>
-								<ul className="experiance-resp">
-									{experiance.responsibilities.map((responsibility, index) => {
-										return (
-											<li className="experiance-resp" key={index}>
-												{responsibility}
-											</li>
-										);
-									})}
-								</ul>
+								<span className="experiance-description">
+									{ experiance.description }
+								</span>
+								{/* <div><span>see more</span></div> */}
 							</div>
 						</li>
 					);

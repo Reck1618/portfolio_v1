@@ -29,6 +29,7 @@
     border-radius: 100%;
     width: 35px;
     height: 35px;
+    /* box-shadow: 0px 0px 20px -1px var(--bg-2); */
 }
 
 .sidebar-container .sidebar-icons a span:hover {

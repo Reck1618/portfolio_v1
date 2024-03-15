@@ -35,14 +35,14 @@
 }
 
 .nav-container-items li:hover {
-    color: var(--green);
+    color: var(--lightest-slate);
     cursor: pointer;
 }
 
 .nav-container-items .active {
     font-size: 56px;
     font-weight: 600;
-    color: var(--lightest-slate) !important;
+    color: var(--green) !important;
     transition: all 0.3s ease-in-out;
 }
 

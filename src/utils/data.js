@@ -18,14 +18,14 @@ export const experianceData = [
     {
         title: 'Associate Software Engineer',
         company: 'Mindfire Digital',
-        duration: '2022-Present',
-        responsibilities: ['first line of responsibilities', 'second line of responsibilities', 'third line of responsibilities']
+        duration: 'July 2022 - Present',
+        description: 'I am working as a fullstack developer at Mindfire Digital. I am responsible for developing and maintaining the web applications.'
     },
     {
         title: 'Intern',
         company: 'Mindfire Digital',
-        duration: '2022',
-        responsibilities: ['first line of responsibilities', 'second line of responsibilities', 'third line of responsibilities']
+        duration: 'Jan 2022 - June 2022',
+        description: 'I am working as a fullstack developer at Mindfire Digital. I am responsible for developing and maintaining the web applications.'
     }
 ]
 
@@ -58,22 +58,6 @@ export const projectsData = [
         name: "Project 4",
         image: project1_img,
         description: "Project 4 description",
-        live: "https://www.google.com",
-        url: "https://www.google.com",
-        skills: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-        name: "Project 5",
-        image: project1_img,
-        description: "Project 5 description",
-        live: "https://www.google.com",
-        url: "https://www.google.com",
-        skills: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-        name: "Project 6",
-        image: project1_img,
-        description: "Project 6 description",
         live: "https://www.google.com",
         url: "https://www.google.com",
         skills: ["HTML", "CSS", "JavaScript"],

@@ -10,15 +10,6 @@
 	margin-top: 8%;
 }
 
-.experiance-container span {
-	font-size: 16px;
-	font-weight: 700;
-}
-
-.experiance-resp {
-	margin: 0 !important;
-}
-
 .experiance-list {
 	--col-gap: 2rem;
 	--row-gap: 2rem;
@@ -58,40 +49,57 @@
 
 /* content */
 .experiance-list li .content {
-	min-height: 225px;
+	min-height: 150px;
 	height: fit-content;
 	padding: 15px;
 	margin-inline: calc(var(--inlineP) * -1);
 
-	text-align: center;
+	text-align: start;
 	background-color: var(--bg-2);
-
-	color: var(--slate);
-	font-size: 1.25rem;
-	font-weight: 700;
+	box-shadow: 0px 0px 20px -5px var(--bg-2);
 
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: center;
-	/* place-content: center; */
+	align-items: flex-start;
 	position: relative;
 	border-radius: 5px;
+	gap: 0.5rem;
 }
 
-.experiance-content {
-	font-size: 1em !important;
-	margin: 10px;
+
+/* .content:hover {
+	box-shadow:  0px 0px 20px -1px var(--green);
+	transition: all 0.3s ease-in-out;
+} */
+
+
+.experiance-title {
+	font-size: 1.2rem;
+	color: var(--lightest-slate);
+	font-weight: 700;
 }
 
 .experiance-company {
-	font-size: 0.7em !important;
-	margin: 10px;
+	font-size: 0.8rem;
 	display: flex;
 	width: 100%;
-	justify-content: space-around;
+	justify-content: flex-start;
 	font-weight: 200;
+	color: var(--green);
+	gap: 1rem;
 }
+
+.experiance-description {
+	font-size: 1rem;
+	color: var(--slate);
+	text-align: start;
+	font-weight: 500;
+}
+
+/* .experiance-description {
+	text-align: justify;
+} */
 
 /* circle */
 .experiance-list li .content::after {
@@ -103,17 +111,15 @@
 	border: 0.5rem solid var(--slate);
 	border-radius: 50%;
 	top: 50%;
-
 	transform: translate(50%, -50%);
 	right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
-.experiance-resp {
-	margin: 10px !important;
-	font-size: 0.9em;
-	padding: 0 !important;
-	text-align: justify;
-}
+/* .experiance-list li .content:hover::after {
+	background: var(--green);
+	border-color: var(--green);
+	transition: all 0.3s ease-in-out;
+} */
 
 @media (min-width: 60rem) {
 	.experiance-list {
@@ -143,13 +149,9 @@
 		transform: translate(-50%, -50%);
 		left: calc(100% + var(--col-gap) + var(--line-w) / 2);
 	}
-  .experiance-resp {
-		text-align: left;
-		margin-left: 0!important;
-	}
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
 	.experiance-resp {
 		text-align: left;
 		margin-left: 0!important;
@@ -159,4 +161,4 @@
 		align-items: flex-start;
 		text-align: center;
 	}
-}
+} */
