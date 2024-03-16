@@ -31,8 +31,8 @@
 }
 
 .contact-form form button:disabled {
-    color: var(--slate);
-    border: 2px solid var(--slate);
+    color: var(--green);
+    border: 2px solid var(--green);
     opacity: 0.6;
     cursor: not-allowed;
 }
@@ -54,8 +54,4 @@
 
 .contact-form form textarea {
     resize: none;
-}
-
-.contact-form form textarea:focus {
-    height: 100px;
 }

@@ -19,13 +19,9 @@
 }
 
 .group .form-input:focus {
-    color: var(--lightest-slate);
-    border-bottom: 2px solid var(--lightest-slate);
-}
-
-
-.group .form-input:focus {
     outline: none;
+    color: var(--lightest-slate);
+    border-bottom: 2px solid var(--green);
 }
 
 .group .form-input:focus ~ .form-input-label {
