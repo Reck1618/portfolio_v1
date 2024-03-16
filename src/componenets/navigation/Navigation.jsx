@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Projects from '../projects/Projects';
 import About from '../about/About';
 import Experiance from '../experience/Experiance';
+import Contact from '../contact/Contact';
 import './Navigation.css';
 
 
@@ -36,10 +37,7 @@ const Navigation = () => {
                 );
             case 'Contact':
                 return (
-                    <section>
-                        <h1>Contact</h1>
-                        <p>Contact content goes here...</p>
-                    </section>
+                    <Contact />
                 );
             case 'Resume':
                 return (

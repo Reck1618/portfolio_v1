@@ -7,7 +7,7 @@ const Experiance = () => {
 		<motion.div
 		initial={{ opacity: 0 }}
 		animate={{ opacity: 1 }}
-		transition={{ duration: 0.5, delay: 0.3 }}
+		transition={{ duration: 0.5, delay: 0.2 }}
 		className="experiance-container">
 			<ul className="experiance-list">
 				{experianceData.map((experiance, index) => {
@@ -17,13 +17,13 @@ const Experiance = () => {
 								<motion.span
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
-										transition={{ duration: 0.5, delay: 0.3 }}
+										transition={{ duration: 0.5, delay: 0.4 }}
 								className="experiance-title">{experiance.title}</motion.span>
 
 								<motion.span
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
-										transition={{ duration: 0.5, delay: 0.5 }}
+										transition={{ duration: 0.5, delay: 0.6 }}
 										className="experiance-company">
 									<div>{experiance.company}</div>
                                     <div>{experiance.duration}</div>
@@ -31,7 +31,7 @@ const Experiance = () => {
 								<motion.span
 										initial={{ opacity: 0 }}
 										animate={{ opacity: 1 }}
-										transition={{ duration: 0.5, delay: 0.7 }}
+										transition={{ duration: 0.5, delay: 0.8 }}
 								className="experiance-description">
 									{ experiance.description }
 								</motion.span>
