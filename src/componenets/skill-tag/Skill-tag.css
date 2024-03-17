@@ -1,0 +1,30 @@
+.skill-tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg-1);
+    color: var(--slate);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 0.6rem;
+    box-shadow: 0px 0px 20px -10px rgba(100, 255, 218, 0.4);
+	border: 1px solid rgba(100, 255, 218, 0.6);
+}
+
+.skill-tag:hover {
+    /* transform: scale(1.05); */
+    box-shadow: 0px 0px 20px -6px rgba(100, 255, 218, 0.8);
+    border: 1px solid rgba(100, 255, 218, 0.8);
+    color: var(--lightest-slate);
+}
+
+.skill-tag img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    color: var(--light-slate) !important;
+}

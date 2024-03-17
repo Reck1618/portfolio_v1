@@ -4,6 +4,7 @@ import Projects from '../projects/Projects';
 import About from '../about/About';
 import Experiance from '../experience/Experiance';
 import Contact from '../contact/Contact';
+import Skills from '../skills/Skills';
 import './Navigation.css';
 
 
@@ -22,10 +23,7 @@ const Navigation = () => {
                 );
             case 'Skills':
                 return (
-                    <section>
-                        <h1>Skills</h1>
-                        <p>Skills content goes here...</p>
-                    </section>
+                    <Skills />
                 );
             case 'Experience':
                 return (
