@@ -1,5 +1,24 @@
 import project1_img from '../assets/project.png';
-import skill_img from '../assets/skill.svg';
+import aws from '../assets/aws.svg';
+import Bash from '../assets/bash.svg';
+import celery from '../assets/celery.svg';
+import cicd from '../assets/ci-cd.svg';
+import css from '../assets/css.svg';
+import django from '../assets/django.svg';
+import docker from '../assets/docker.svg';
+import git from '../assets/git.svg';
+import Github from '../assets/github.svg';
+import html from '../assets/html.svg';
+import js from '../assets/js.svg';
+import mongo from '../assets/mongo-db.svg';
+import nginx from '../assets/nginx.svg';
+import python from '../assets/python.svg';
+import react from '../assets/react.svg';
+import redis from '../assets/redis.svg';
+import redux from '../assets/redux.svg';
+import restApi from '../assets/rest-api.svg';
+import selenium from '../assets/selenium.svg';
+import sql from '../assets/sql.svg';
 
 export const socials = {
     Github: 'https://github.com/Reck1618',
@@ -34,39 +53,40 @@ export const skillsData = [
     {
         type: 'Backend',
         skills: [
-            {'Python': skill_img},
-            {'NodeJS': skill_img},
-            {'Express': skill_img},
-            {'MongoDB': skill_img},
-            {'REST API': skill_img}
+            { 'Python': python },
+            { 'Django': django },
+            { 'REST API': restApi },
+            { 'Docker': docker },
+            { 'Nginx': nginx },
+            { 'AWS': aws },
+            { 'Bash': Bash },
         ]
     },
-
     {
         type: 'Frontend',
         skills: [
-            {'HTML': skill_img},
-            {'CSS': skill_img},
-            {'JavaScript': skill_img},
-            {'React': skill_img},
-            {'Redux': skill_img},
-            {'Material-UI': skill_img},
-            {'Bootstrap': skill_img}
+            { 'JavaScript': js },
+            { 'React': react },
+            { 'Redux': redux },
+            { 'HTML': html },
+            { 'CSS': css },
         ]
     },
-
     {
         type: 'Others',
         skills: [
-            {'Git': skill_img},
-            {'Docker': skill_img},
-            {'Jenkins': skill_img},
-            {'AWS': skill_img},
-            {'Heroku': skill_img}
+            { 'Selenium': selenium },
+            { 'MongoDB': mongo },
+            { 'SQL': sql },
+            { 'Redis': redis },
+            { 'Git': git },
+            { 'Github': Github },
+            { 'Celery': celery },
+            { 'CI/CD': cicd },
         ]
     }
-
 ];
+
 
 export const projectsData = [
     {

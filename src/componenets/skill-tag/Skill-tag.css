@@ -5,7 +5,7 @@
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     background-color: var(--bg-1);
-    color: var(--slate);
+    color: var(--light-slate);
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
@@ -13,6 +13,7 @@
     gap: 0.6rem;
     box-shadow: 0px 0px 20px -10px rgba(100, 255, 218, 0.4);
 	border: 1px solid rgba(100, 255, 218, 0.6);
+    opacity: 1;
 }
 
 .skill-tag:hover {
@@ -23,8 +24,14 @@
 }
 
 .skill-tag img {
+    opacity: 0.8;
     width: 24px;
     height: 24px;
     object-fit: contain;
     color: var(--light-slate) !important;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover img {
+    opacity: 1;
 }
