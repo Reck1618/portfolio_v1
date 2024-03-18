@@ -59,9 +59,7 @@ const Contact = () => {
     };
 
     const handleClosePopup = () => {
-        console.log(submitStatus.isOpen);
         setSubmitStatus({ isOpen: false, message: '' });
-        console.log(submitStatus.isOpen);
     };
 
     return (
