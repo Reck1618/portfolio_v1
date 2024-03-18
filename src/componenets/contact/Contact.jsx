@@ -27,11 +27,35 @@ const Contact = () => {
         setFormFields(defaultFormFields);
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(formFields);
+
+        if (!isFormValid()) {
+            console.log('Form is not valid');
+            return;
+        }
+
+        try {
+            const response = await fetch('https://formspree.io/f/xleqwddr',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formFields)
+            });
+
+        if (response.ok) {
+            alert('Form submitted');
+        } else {
+            alert('Form submission failed');
+            }
+        }
+        catch (error) {
+            console.log('Error submitting the form', error);
+        }
         resetFormFields();
-    }
+    };
 
     return (
         <div className='contact-form'>
