@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import FormInput from '../form-input/Form-input';
+import ContactPopup from '../contact-popup/Contact-popup';
 import './Contact.css'
 
 const defaultFormFields = {
@@ -12,6 +13,8 @@ const defaultFormFields = {
 const Contact = () => {
 
     const [formFields, setFormFields] = useState(defaultFormFields);
+    const [submitStatus, setSubmitStatus] = useState({ isOpen: false, message: '' });
+
     const { fullName, email, subject, message } = formFields;
 
     const handleChange = (event) => {
@@ -30,13 +33,11 @@ const Contact = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (!isFormValid()) {
-            console.log('Form is not valid');
-            return;
-        }
+        const successMessage = 'Your message has been successfully sent. Thank you for reaching out!';
+        const errorMessage = 'Uh Oh!! Something went wrong. Please try again!';
 
         try {
-            const response = await fetch('https://formspree.io/f/xleqwddr',
+            const response = await fetch(import.meta.env.VITE_FORMSPREE_ENDPOINT,
             {
                 method: 'POST',
                 headers: {
@@ -45,16 +46,22 @@ const Contact = () => {
                 body: JSON.stringify(formFields)
             });
 
-        if (response.ok) {
-            alert('Form submitted');
-        } else {
-            alert('Form submission failed');
+            if (response.ok) {
+                setSubmitStatus({ isOpen: true, message: successMessage });
+                resetFormFields();
+            } else {
+                setSubmitStatus({ isOpen: true, message: errorMessage });
             }
+
+        } catch (error) {
+            return setSubmitStatus({ isOpen: true, message: errorMessage });
         }
-        catch (error) {
-            console.log('Error submitting the form', error);
-        }
-        resetFormFields();
+    };
+
+    const handleClosePopup = () => {
+        console.log(submitStatus.isOpen);
+        setSubmitStatus({ isOpen: false, message: '' });
+        console.log(submitStatus.isOpen);
     };
 
     return (
@@ -66,6 +73,7 @@ const Contact = () => {
                 <FormInput type='textarea' name='message' label='Message' onChange={handleChange} value={message} required />
                 <button type='submit' disabled={!isFormValid()}>Send</button>
             </form>
+            <ContactPopup isOpen={submitStatus.isOpen} message={submitStatus.message} onClose={handleClosePopup} />
         </div>
     )
 };
