@@ -14,7 +14,7 @@ const ResumeButton = () => {
     };
 
     return (
-        <button onClick={downloadResume}>Download Resume</button>
+        <button className='download-resume-button' onClick={downloadResume}>Download</button>
     );
 };
 

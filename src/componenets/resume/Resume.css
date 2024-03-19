@@ -1,0 +1,26 @@
+.download-resume-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.6rem;
+    background-color: var(--bg-1);
+    color: rgba(100, 255, 218, 0.8);
+    border: 1px solid rgba(100, 255, 218, 1);
+    box-shadow: 0px 0px 20px -6px rgba(100, 255, 218, 0.4);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-resume-button:hover {
+    transform: scale(1.05);
+    background-color: var(--green-light);
+    box-shadow: 0px 0px 20px -6px rgba(100, 255, 218, 1);
+}
+
+.download-resume-button:active {
+    color: var(--lightest-slate);
+    border: 2px solid var(--lightest-slate);
+}
