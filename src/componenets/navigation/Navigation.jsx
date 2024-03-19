@@ -5,6 +5,7 @@ import About from '../about/About';
 import Experiance from '../experience/Experiance';
 import Contact from '../contact/Contact';
 import Skills from '../skills/Skills';
+import ResumeButton from '../resume/Resume';
 import './Navigation.css';
 
 
@@ -39,10 +40,7 @@ const Navigation = () => {
                 );
             case 'Resume':
                 return (
-                    <section>
-                        <h1>Resume</h1>
-                        <p>Resume content goes here...</p>
-                    </section>
+                    <ResumeButton />
                 );
             default:
                 return null;
