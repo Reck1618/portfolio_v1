@@ -15,12 +15,11 @@
 }
 
 .download-resume-button:hover {
-    transform: scale(1.05);
-    background-color: var(--green-light);
+    background-color: var(--bg-1);
     box-shadow: 0px 0px 20px -6px rgba(100, 255, 218, 1);
 }
 
 .download-resume-button:active {
-    color: var(--lightest-slate);
-    border: 2px solid var(--lightest-slate);
+    transition: none;
+    transform: scale(0.95);
 }

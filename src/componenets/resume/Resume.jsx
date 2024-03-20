@@ -1,5 +1,5 @@
 import './Resume.css';
-import Resume from '../../assets/Ritik_dev.pdf';
+import Resume from '../../assets/resume/Ritik_dev.pdf';
 
 const ResumeButton = () => {
     const downloadResume = () => {

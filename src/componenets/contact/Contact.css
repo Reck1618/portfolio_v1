@@ -26,7 +26,7 @@
     cursor: pointer;
     color: var(--green);
     border: 2px solid var(--green);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     opacity: 0.6;
 }
 
@@ -42,14 +42,15 @@
 }
 
 .contact-form form button:not(:disabled):hover {
-    transform: scale(1.1);
+    box-shadow: 0px 0px 20px -6px rgba(100, 255, 218, 1);
 }
 
 .contact-form form button:active {
-    transition: all 0.1s ease-in-out !important;
-    background-color: var(--bg-1) !important;
+    transform: scale(0.95);
+    transition: none;
+    /* background-color: var(--bg-1) !important;
     color: var(--lightest-slate) !important;
-    border: 3px solid var(--lightest-slate) !important;
+    border: 3px solid var(--lightest-slate) !important; */
 }
 
 .contact-form form textarea {
