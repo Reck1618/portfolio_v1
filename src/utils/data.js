@@ -90,17 +90,17 @@ export const skillsData = [
 
 export const projectsData = [
     {
-        name: "Project 1",
+        name: "3-D Tshirt Designer",
         image: project1_img,
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         live: "https://www.google.com",
         url: "https://www.google.com",
-        skills: ["HTML", "CSS", "JavaScript"],
+        skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Django", "REST API", "Docker", "AWS"],
     },
     {
-        name: "Project 2",
+        name: "E-commerce Website",
         image: project1_img,
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         live: "https://www.google.com",
         url: "https://www.google.com",
         skills: ["HTML", "CSS", "JavaScript"],

@@ -6,30 +6,31 @@ import './Project-card.css';
 
 const ProjectCard = ({ project }) => {
 
-    const {name, image, description, live, url, skills} = project;
+    const {name, description, live, url, skills} = project;
 
     return (
-        <div className='project-card' style={{ backgroundImage: `url(${image})` }}>
+        <div className='project-card'>
 
-            <div className='project-content'>
+            <div className='project-card-header'>
+                <div className='project-heading'>
+                    {name}
+                </div>
                 <div className='project-links'>
                     <a href={url} target="_blank" rel="noreferrer"><TbBrandGithub /></a>
                     <a href={live} target="_blank" rel="noreferrer"><RxOpenInNewWindow /></a>
                 </div>
+            </div>
 
-                <div className='project-heading'>
-                    <h3>{name}</h3>
-                </div>
+            <div className='project-description'>
+                {description}
+            </div>
 
-                <div className='project-description'>
-                    <p>{description}</p>
-                </div>
-
-                <div className='project-skills'>
-                    {skills.map((skill, index) => {
-                        return <span key={index}>{skill}</span>
-                    })}
-                </div>
+            <div className='project-skills'>
+                {skills.map((skill, index) => {
+                    if (index < 5) {
+                    return <span key={index}>{skill}</span>
+                    }
+                })}
             </div>
         </div>
     )

@@ -39,7 +39,7 @@ const Projects = () => {
             <div className={`control-arrow ${startIndex === 0 ? 'disabled' : ''}`} onClick={handlePrev}>&#8249;</div>
 
             <div className={`projects-list ${isAnimating ? 'fade-out' : 'fade-in'}`}>
-                {projectsData.slice(startIndex, startIndex + 2).map((project, index) => (
+                {projectsData.slice(startIndex, startIndex + 1).map((project, index) => (
                         <ProjectCard key={index} project={project} />
                     ))}
                 <div className='control-dots'>{dots}</div>
