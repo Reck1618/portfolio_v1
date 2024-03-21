@@ -36,16 +36,16 @@ const Projects = () => {
     return (
         <div className='projects-container'>
 
-            <div className={`control-arrow ${startIndex === 0 ? 'disabled' : ''}`} onClick={handlePrev}>&#8249;</div>
-
             <div className={`projects-list ${isAnimating ? 'fade-out' : 'fade-in'}`}>
-                {projectsData.slice(startIndex, startIndex + 1).map((project, index) => (
+                {projectsData.slice(startIndex, startIndex + 2).map((project, index) => (
                         <ProjectCard key={index} project={project} />
                     ))}
-                <div className='control-dots'>{dots}</div>
             </div>
-
-            <div className={`control-arrow ${startIndex + 2 >= projectsData.length ? 'disabled' : ''}`} onClick={handleNext}>&#8250;</div>
+            <div className='project-controls'>
+                <div className={`control-arrow ${startIndex === 0 ? 'disabled' : ''}`} onClick={handlePrev}>&#8249;</div>
+                <div className='control-dots'>{dots}</div>
+                <div className={`control-arrow ${startIndex + 2 >= projectsData.length ? 'disabled' : ''}`} onClick={handleNext}>&#8250;</div>
+            </div>
 
         </div>
     );

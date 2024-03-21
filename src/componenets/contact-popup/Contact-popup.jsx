@@ -5,9 +5,7 @@ const ContactPopup = ({ isOpen, message, onClose }) => {
 
     return (
         <>
-            {isOpen &&
-                <div className="blur-overlay"></div>
-            }
+            <div className={`blur-overlay ${isOpen ? 'open' : ''}`}></div>
             <div className={`contact-popup ${isOpen ? 'open' : ''}`}>
                 <div className="contact-popup-header">
                     <button className="close-button" onClick={onClose}>X</button>
