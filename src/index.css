@@ -4,15 +4,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --light-text-1: rgba(60, 60, 67);
-  --light-text-2: rgba(60, 60, 67, .78);
-  --light-text-3: rgba(60, 60, 67, .56);
-
-  --text-1: rgba(255, 255, 245, .86);
-  --text-2: rgba(255, 255, 245, .6);
-  --text-3: rgba(255, 255, 245, .38);
-
-  --bg-1: #0F172A;
+  /* --bg-1: #0F172A; */
+  --bg-1: #111111;
   --bg-2: #1B294B;
   --bg-3: #101028;
 
@@ -20,7 +13,8 @@
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
-  --green: #64ffda;
+  /* --green: #64ffda; */
+  --green: #CD1818;
 
 }
 

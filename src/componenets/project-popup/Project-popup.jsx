@@ -15,6 +15,9 @@ const ProjectPopup = ({ isOpen, project, onClose }) => {
                     </div>
                     <button className="close-button" onClick={onClose}>X</button>
                 </div>
+                <div className="temp-image">
+                    <img src={project.image} alt={project.name} className="project-popup-image" />
+                </div>
                 <div className="project-popup-content">
                     <div className="project-popup-details">
                         <p>{project.summary}</p>
