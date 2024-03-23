@@ -39,13 +39,13 @@ export const experianceData = [
         title: 'Associate Software Engineer',
         company: 'Mindfire Digital',
         duration: 'July 2022 - Present',
-        description: 'I am working as a fullstack developer at Mindfire Digital. I am responsible for developing and maintaining the web applications.'
+        description: 'I am working as a fullstack developer at Mindfire Digital. I am responsible for developing and maintaining the web applications'
     },
     {
         title: 'Intern',
         company: 'Mindfire Digital',
         duration: 'Jan 2022 - June 2022',
-        description: 'I am working as a fullstack developer at Mindfire Digital. I am responsible for developing and maintaining the web applications.'
+        description: 'I am working as a fullstack developer at Mindfire Digital. I am responsible for developing and maintaining the web applications'
     }
 ]
 

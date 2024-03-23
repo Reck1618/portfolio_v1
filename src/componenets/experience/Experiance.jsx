@@ -34,6 +34,7 @@ const Experiance = () => {
 										transition={{ duration: 0.5, delay: 0.8 }}
 								className="experiance-description">
 									{ experiance.description }
+									<span>...show more</span>
 								</motion.span>
 							</div>
 						</li>

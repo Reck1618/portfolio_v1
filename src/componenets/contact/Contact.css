@@ -24,16 +24,16 @@
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
-    color: var(--green);
-    border: 2px solid var(--green);
+    color: var(--highlight);
+    border: 2px solid var(--highlight);
     transition: all 0.2s ease-in-out;
     opacity: 0.6;
 }
 
 .contact-form form button:disabled {
-    color: var(--green);
-    border: 2px solid var(--green);
-    opacity: 0.6;
+    color: var(--highlight);
+    border: 2px solid var(--highlight);
+    opacity: 0.4;
     cursor: not-allowed;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .contact-form form button:not(:disabled):hover {
-    box-shadow: 0px 0px 20px -6px rgba(100, 255, 218, 1);
+    box-shadow: 0px 0px 20px -6px var(--highlight);
 }
 
 .contact-form form button:active {

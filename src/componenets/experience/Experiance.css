@@ -6,7 +6,7 @@
 	height: 100%;
 	width: 100%;
 	margin: auto;
-	color: var(--slate);
+	/* color: var(--text-3); */
 	margin-top: 8%;
 }
 
@@ -28,7 +28,7 @@
 	content: "";
 	grid-column: 1;
 	grid-row: 1 / span 20;
-	background: var(--slate);
+	background: var(--text-3);
 	border-radius: calc(var(--line-w) / 2);
 }
 
@@ -45,6 +45,7 @@
 	grid-row: span 2;
 	display: grid;
 	grid-template-rows: min-content min-content min-content;
+	cursor: pointer;
 }
 
 /* content */
@@ -56,8 +57,8 @@
 
 	text-align: start;
 	/* background-color: var(--bg-2); */
-	box-shadow: 0px 0px 20px -10px rgba(100, 255, 218, 0.2);
-	border: 1px solid rgba(100, 255, 218, 0.6);
+	box-shadow: 0px 0px 20px -8px var(--highlight-4);
+	border: 1px solid var(--highlight-6);
 
 	display: flex;
 	flex-direction: column;
@@ -70,8 +71,8 @@
 }
 
 .experiance-list li .content:hover {
-	box-shadow: 0px 0px 20px -8px rgba(100, 255, 218, 0.8);
-	border: 1px solid rgba(100, 255, 218, 0.8);
+	box-shadow: 0px 0px 20px -6px var(--highlight-8);
+	border: 1px solid var(--highlight-8);
 }
 
 
@@ -83,7 +84,7 @@
 
 .experiance-title {
 	font-size: 1.2rem;
-	color: var(--lightest-slate);
+	color: var(--text-1);
 	font-weight: 700;
 }
 
@@ -92,16 +93,22 @@
 	display: flex;
 	width: 100%;
 	justify-content: flex-start;
-	font-weight: 200;
-	color: var(--green);
+	font-weight: 300;
+	color: var(--highlight-8);
 	gap: 1rem;
 }
 
 .experiance-description {
+	margin: auto 0;
 	font-size: 1rem;
-	color: var(--slate);
+	color: var(--text-3);
 	text-align: start;
-	font-weight: 500;
+	font-weight: 400;
+}
+
+.experiance-description span {
+	color: var(--highlight-8);
+	font-weight: 200;
 }
 
 /* .experiance-description {
@@ -114,8 +121,8 @@
 	position: absolute;
 	width: 20px;
 	aspect-ratio: 1;
-	background: var(--slate);
-	border: 3px solid var(--slate);
+	background: var(--text-3);
+	border: 3px solid var(--text-3);
 	border-radius: 50%;
 	top: 50%;
 	transform: translate(50%, -50%);
@@ -123,8 +130,8 @@
 }
 
 .experiance-list li .content:hover::after {
-	background: rgba(100, 255, 218, 1);
-	border-color: rgba(100, 255, 218, 0.8);
+	background: var(--highlight);
+	border-color: var(--highlight-8);
 	transition: all 0.3s ease-in-out;
 }
 

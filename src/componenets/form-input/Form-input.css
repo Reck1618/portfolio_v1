@@ -6,33 +6,33 @@
 .group .form-input {
     background: none;
     background-color: var(--bg-1);
-    color: var(--slate);
+    color: var(--text-3);
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
     border: none;
     border-radius: 0;
-    border-bottom: 2px solid var(--slate);
+    border-bottom: 2px solid var(--text-3);
     margin: 25px 0;
     transition: all 0.3s ease;
 }
 
 .group .form-input:focus {
     outline: none;
-    color: var(--lightest-slate);
-    border-bottom: 2px solid var(--green);
+    color: var(--text-1);
+    border-bottom: 2px solid var(--highlight);
 }
 
 .group .form-input:focus ~ .form-input-label {
     top: -14px;
     font-size: 16px;
     font-weight: 600;
-    color: var(--green);
+    color: var(--highlight);
 }
 
 .group .form-input-label {
-    color: var(--light-slate);
+    color: var(--text-2);
     font-size: 14px;
     font-weight: normal;
     position: absolute;
@@ -45,5 +45,5 @@
 .group .form-input-label.shrink {
     top: -14px;
     font-size: 12px;
-    color: var(--green);
+    color: var(--highlight);
 }

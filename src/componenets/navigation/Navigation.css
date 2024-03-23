@@ -18,7 +18,7 @@
     display: flex;
     /* flex: 1; */
     flex-direction: column;
-    color: var(--slate);
+    color: var(--text-3);
     font-size: 36px;
     font-weight: 500;
     list-style-type: none;
@@ -35,16 +35,15 @@
 }
 
 .nav-container-items li:hover {
-    color: var(--lightest-slate);
+    color: var(--text-1);
     cursor: pointer;
 }
 
 .nav-container-items .active {
     font-size: 56px;
     font-weight: 600;
-    color: var(--green) !important;
+    color: var(--highlight) !important;
     transition: all 0.3s ease-in-out;
-    /* text-shadow: -3px 2px 8px var(--bg-2); */
 }
 
 main {
