@@ -23,12 +23,29 @@
 
 }
 
+.light-theme {
+  --bg-1: #FDF6F6;
+  --bg-2: #e5e5e5;
+
+  --text: #111111;
+  --text-1: #222222;
+  --text-2: #333333;
+  --text-3: #444444;
+
+  --highlight:  #735DA5;
+  --highlight-2: rgba(115, 93, 165, 0.2);
+  --highlight-4: rgba(115, 93, 165, 0.4);
+  --highlight-6: rgba(115, 93, 165, 0.8);
+  --highlight-8: rgba(115, 93, 165, 1);
+}
+
 
 body {
   height: 100vh;
   width: 100vw;
   margin: 0;
   background-color: var(--bg-1);
+  transition: all 0.6s ease-in-out;
 }
 
 #root {
