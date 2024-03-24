@@ -39,8 +39,8 @@ const ProjectCard = ({ project }) => {
 
             <div className='project-skills'>
                 {skills.map((skill, index) => {
-                    if (index < 5) {
-                    return <span key={index}>{skill}</span>
+                    if (index < 6) {
+                    return <span key={index}>{Object.keys(skill)[0]}</span>
                     }
                 })}
             </div>

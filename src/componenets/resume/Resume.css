@@ -5,7 +5,7 @@
     padding: 0.8rem 1.6rem;
     background-color: var(--bg-1);
     color: var(--highlight-8);
-    border: 1px solid var(--highlight);
+    border: 2px solid var(--highlight-6);
     box-shadow: 0px 0px 20px -6px var(--highlight-4);
     border-radius: 5px;
     font-size: 1.5rem;
@@ -15,8 +15,8 @@
 }
 
 .download-resume-button:hover {
-    background-color: var(--bg-1);
-    box-shadow: 0px 0px 20px -4px var(--highlight);
+    box-shadow: 0px 0px 20px -6px var(--highlight);
+    border: 2px solid var(--highlight);
 }
 
 .download-resume-button:active {

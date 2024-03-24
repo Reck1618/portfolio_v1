@@ -24,8 +24,8 @@
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
-    color: var(--highlight);
-    border: 2px solid var(--highlight);
+    color: var(--highlight-8);
+    border: 2px solid var(--highlight-8);
     transition: all 0.2s ease-in-out;
     opacity: 0.6;
 }
@@ -43,6 +43,7 @@
 
 .contact-form form button:not(:disabled):hover {
     box-shadow: 0px 0px 20px -6px var(--highlight);
+    border: 2px solid var(--highlight);
 }
 
 .contact-form form button:active {

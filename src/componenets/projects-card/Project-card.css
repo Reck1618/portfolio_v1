@@ -1,23 +1,20 @@
 .project-card {
-    /* width: 80%;
-    height: 100%; */
     width: 250px;
     height: 260px;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: var(--bg-1);
-	border: 1px solid rgba(100, 255, 218, 0.6);
+	border: 1px solid var(--highlight-6);
     border-radius: 5px;
-    box-shadow: 0px 0px 20px -10px rgba(100, 255, 218, 0.2);
+    box-shadow: 0px 0px 20px -8px var(--highlight-2);
     transition: all 0.3s ease-in-out;
     gap: 1rem;
     cursor: pointer;
 }
 
 .project-card:hover {
-    box-shadow: 0px 0px 20px -8px rgba(100, 255, 218, 0.8);
-	border: 1px solid rgba(100, 255, 218, 0.8);
+    box-shadow: 0px 0px 20px -6px var(--highlight-8);
+	border: 1px solid var(--highlight-8);
 }
 
 .project-card-header {
@@ -30,7 +27,7 @@
 
 .project-heading {
     font-size: 1.5rem;
-    color: var(--lightest-slate);
+    color: var(--text-1);
     font-weight: 600;
     opacity: 0.9;
 }
@@ -42,27 +39,27 @@
 }
 
 .project-links a {
-    color: var(--light-slate);
+    color: var(--text-2);
     font-size: 1.5rem;
-    transform-style: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .project-links a:hover {
     opacity: 1;
     transform: scale(1.1);
-    color: var(--green);
+    color: var(--highlight);
     font-size: 1.5rem;
 }
 
 .project-summary {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--slate);
+    color: var(--text-3);
     text-align: start;
 }
 
 .project-summary span {
-    color: rgba(100, 255, 218, 0.8);
+    color: var(--highlight-8);
     font-size: 1rem;
     font-weight: 300;
 
@@ -71,7 +68,7 @@
 .project-skills {
     display: flex;
     margin-top: auto;
-    color: var(--green);
+    color: var(--highlight);
     opacity: 0.8;
     flex-direction: row;
     gap: 1rem;
