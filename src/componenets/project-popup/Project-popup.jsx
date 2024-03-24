@@ -27,15 +27,18 @@ const ProjectPopup = ({ isOpen, project, onClose }) => {
                             </div>
                         </div>
                         <div className="content-details">
-                            <p>{project.summary}</p>
+                            {project.summary}
                         </div>
                     </div>
                 </div>
                 <div className='popup-second-block'>
                     <div className='content-features'>
-                        {project.features.map((feature, index) => (
-                            <span key={index}>- {feature}</span>
-                        ))}
+                        <div>Features</div>
+                        <div className='content-feature-item'>
+                            {project.features.map((feature, index) => (
+                                <span key={index}>- {feature}</span>
+                            ))}
+                        </div>
                     </div>
                     <div className='content-skills'>
                         {project.skills.map((skill, index) => (
