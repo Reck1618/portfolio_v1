@@ -13,11 +13,11 @@ const ProjectCard = ({ project }) => {
 
     const toggleModal = () => {
         setModalStatus(!modalStatus);
-    }
+    };
 
     const stopPropagation = (e) => {
         e.stopPropagation();
-    }
+    };
 
     return (
         <>
