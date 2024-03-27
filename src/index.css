@@ -63,12 +63,12 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
   backdrop-filter: blur(5px); /* Apply the blur effect */
-  z-index: -999; /* Ensure the overlay is above other content */
-  opacity: 0;
+  z-index: 5; /* Ensure the overlay is above other content */
+  opacity: 1;
   transition: all 0.3s ease-in-out;
 }
 
-.blur-overlay.open {
+/* .blur-overlay.open {
   z-index: 999;
   opacity: 1;
-}
+} */

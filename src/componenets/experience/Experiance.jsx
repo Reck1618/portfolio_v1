@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { experianceData } from "../../utils/data";
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import ExperienceModal from '../experience-modal/Experience-modal';
 import "./Experiance.css";
 
 const Experience = () => {
 	const [modalStatus, setModalStatus] = useState(false);
-	const [selectedExperience, setSelectedExperience] = useState(experianceData[0]);
+	const [selectedExperience, setSelectedExperience] = useState({});
 
 	const toggleModal = (index) => {
 		setSelectedExperience(experianceData[index]);
@@ -56,9 +56,9 @@ const Experience = () => {
 					);
 				})}
 			</ul>
-
-			<ExperienceModal isOpen={modalStatus} experience={selectedExperience} onClose={handleCloseModal} />
-
+			<AnimatePresence>
+				{modalStatus && <ExperienceModal experience={selectedExperience} onClose={handleCloseModal} />}
+			</AnimatePresence>
 		</motion.div>
 	);
 };
