@@ -19,6 +19,7 @@ import redux from '../assets/svg/redux.svg';
 import restApi from '../assets/svg/rest-api.svg';
 import selenium from '../assets/svg/selenium.svg';
 import sql from '../assets/svg/sql.svg';
+import ansible from '../assets/svg/ansible.svg';
 
 export const socials = {
     Github: 'https://github.com/Reck1618',
@@ -74,6 +75,7 @@ export const skillsData = [
             { 'REST API': restApi },
             { 'Docker': docker },
             { 'Nginx': nginx },
+            { 'Ansible': ansible },
             { 'AWS': aws },
             { 'Bash': Bash },
         ]
