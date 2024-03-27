@@ -45,12 +45,12 @@ ExperienceModal.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     experience: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        company: PropTypes.string.isRequired,
-        duration: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        responsabilities: PropTypes.arrayOf(PropTypes.string).isRequired,
-    }).isRequired,
+        title: PropTypes.string,
+        company: PropTypes.string,
+        duration: PropTypes.string,
+        description: PropTypes.string,
+        responsabilities: PropTypes.arrayOf(PropTypes.string),
+    }),
 };
 
 export default ExperienceModal;

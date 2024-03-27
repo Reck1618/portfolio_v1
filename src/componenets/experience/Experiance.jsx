@@ -6,9 +6,15 @@ import "./Experiance.css";
 
 const Experience = () => {
 	const [modalStatus, setModalStatus] = useState(false);
+	const [selectedExperience, setSelectedExperience] = useState(experianceData[0]);
 
-	const toggleModal = () => {
+	const toggleModal = (index) => {
+		setSelectedExperience(experianceData[index]);
 		setModalStatus(!modalStatus);
+	};
+
+	const handleCloseModal = () => {
+		setModalStatus(false);
 	};
 
 
@@ -21,7 +27,7 @@ const Experience = () => {
 			<ul className="experience-list">
 				{experianceData.map((experience, index) => {
 					return (
-						<li key={index} onClick={() => toggleModal(experience)}>
+						<li key={index} onClick={() => toggleModal(index)}>
 							<div className="content">
 								<motion.span
 										initial={{ opacity: 0 }}
@@ -46,11 +52,13 @@ const Experience = () => {
 									<span>...show more</span>
 								</motion.span>
 							</div>
-							<ExperienceModal isOpen={modalStatus} experience={experience} onClose={toggleModal} />
 						</li>
 					);
 				})}
 			</ul>
+
+			<ExperienceModal isOpen={modalStatus} experience={selectedExperience} onClose={handleCloseModal} />
+
 		</motion.div>
 	);
 };
