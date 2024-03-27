@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import FormInput from '../form-input/Form-input';
 import ContactPopup from '../contact-popup/Contact-popup';
 import './Contact.css'
@@ -71,7 +72,11 @@ const Contact = () => {
                 <FormInput type='textarea' name='message' label='Message' onChange={handleChange} value={message} required />
                 <button type='submit' disabled={!isFormValid()}>Send</button>
             </form>
-            <ContactPopup isOpen={submitStatus.isOpen} message={submitStatus.message} onClose={handleClosePopup} />
+
+            <AnimatePresence>
+                { submitStatus.isOpen && <ContactPopup message={submitStatus.message} onClose={handleClosePopup} /> }
+            </AnimatePresence>
+
         </div>
     )
 };

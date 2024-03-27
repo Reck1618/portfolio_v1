@@ -56,7 +56,6 @@ const ExperienceModal = ({ experience, onClose }) => {
 }
 
 ExperienceModal.propTypes = {
-    isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     experience: PropTypes.shape({
         title: PropTypes.string,

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { RxOpenInNewWindow } from "react-icons/rx";
 import { TbBrandGithub } from "react-icons/tb";
+import { AnimatePresence } from 'framer-motion';
 import PropTypes from 'prop-types';
 import ProjectPopup from '../project-popup/Project-popup';
 import './Project-card.css';
@@ -18,6 +19,10 @@ const ProjectCard = ({ project }) => {
     const stopPropagation = (e) => {
         e.stopPropagation();
     };
+
+    const handleCloseModal = () => {
+		setModalStatus(false);
+	};
 
     return (
         <>
@@ -45,7 +50,10 @@ const ProjectCard = ({ project }) => {
                 })}
             </div>
         </div>
-        <ProjectPopup isOpen={modalStatus} project={project} onClose={toggleModal} />
+
+        <AnimatePresence>
+            { modalStatus && <ProjectPopup project={project} onClose={handleCloseModal} /> }
+        </AnimatePresence>
         </>
     )
 };

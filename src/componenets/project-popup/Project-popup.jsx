@@ -1,15 +1,28 @@
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import { RxOpenInNewWindow } from "react-icons/rx";
 import { TbBrandGithub } from "react-icons/tb";
 import SkillTag from '../skill-tag/Skill-tag';
 import './Project-popup.css'
 
-const ProjectPopup = ({ isOpen, project, onClose }) => {
+const ProjectPopup = ({project, onClose }) => {
     return (
         <>
-            <div className={`blur-overlay ${isOpen ? 'open' : ''}`}></div>
+            <motion.div
+                className="blur-overlay"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, transition: { duration: 0.2 } }}
+                transition={{ duration: 0.3 }}
+            ></motion.div>
 
-            <div className={`project-popup ${isOpen ? 'open' : ''}`}>
+            <motion.div
+                className="project-popup"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, transition: { duration: 0.2 } }}
+                transition={{ duration: 0.3 }}
+            >
                 <div className="project-popup-header">
                     <div className='project-popup-heading'>
                         {project.name}
@@ -46,13 +59,12 @@ const ProjectPopup = ({ isOpen, project, onClose }) => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 }
 
 ProjectPopup.propTypes = {
-    isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     project: PropTypes.shape({
         name: PropTypes.string.isRequired,
