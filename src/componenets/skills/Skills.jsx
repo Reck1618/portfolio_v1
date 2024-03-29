@@ -30,6 +30,7 @@ const Skills = () => {
 
     return (
         <motion.div
+            id='skills'
             className='skills-container'
             variants={containerVariants}
             initial='hidden'

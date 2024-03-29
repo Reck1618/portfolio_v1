@@ -44,7 +44,7 @@ const Projects = () => {
     }
 
     return (
-        <div className='projects-container'>
+        <div id='projects' className='projects-container'>
 
             <div className={`projects-list ${isAnimating ? 'fade-out' : 'fade-in'}`}>
                 {projectsData.slice(startIndex, startIndex + (isSmallScreen ? 1 : 2)).map((project, index) => (

@@ -67,3 +67,9 @@ body {
   opacity: 1;
   transition: all 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 768px){
+  body {
+    height: auto;
+  }
+}

@@ -4,6 +4,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { socials } from "../../utils/data";
 import LinkIcon from "../link-icon/Link-icon";
+import { useMobileView } from '../../contexts/MobileContext';
 import './Side-bar.css'
 
 const socialIcons = {
@@ -27,26 +28,47 @@ const socialIcons = {
 
 
 const SideBar = () => {
-    return (
-        <motion.div
-            initial={{ y: '50vw' }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className='sidebar-container'
-        >
 
-            <div className='sidebar-icons'>
-                {Object.keys(socialIcons).map((name, index) => (
-                    <LinkIcon
-                        key={index}
-                        icon={socialIcons[name].icon}
-                        link={socialIcons[name].link}
-                    />
-                ))}
+    const isMobileView = useMobileView();
+
+    if (isMobileView) {
+        return (
+            <div className='sidebar-container'>
+                <div className="sidebar-line one"></div>
+                <div className='sidebar-icons'>
+                    {Object.keys(socialIcons).map((name, index) => (
+                        <LinkIcon
+                            key={index}
+                            icon={socialIcons[name].icon}
+                            link={socialIcons[name].link}
+                        />
+                    ))}
+                </div>
+                <div className='sidebar-line two'></div>
             </div>
-            <div className='sidebar-line'></div>
-        </motion.div>
-    );
+        );
+    } else {
+        return (
+            <motion.div
+                initial={{ x: '-20vw' }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className='sidebar-container'
+            >
+                <div className="sidebar-line one"></div>
+                <div className='sidebar-icons'>
+                    {Object.keys(socialIcons).map((name, index) => (
+                        <LinkIcon
+                            key={index}
+                            icon={socialIcons[name].icon}
+                            link={socialIcons[name].link}
+                        />
+                    ))}
+                </div>
+                <div className='sidebar-line two'></div>
+            </motion.div>
+        );
+    }
 };
 
 export default SideBar;

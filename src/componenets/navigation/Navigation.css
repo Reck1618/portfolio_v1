@@ -54,3 +54,52 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+
+/* Mobile Settings */
+
+#mobile-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    background-color: var(--bg-1);
+    border-bottom: 1px solid var(--highlight-8);
+    box-shadow: -2px 0 8px -1px var(--highlight-6);
+    z-index: 990;
+}
+
+@media screen and (max-width: 768px) {
+    #main-content {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 5vh;
+        left: 0;
+        width: 100%;
+        height: 95vh;
+        margin-left: 0;
+        align-items: start;
+        background-color: var(--bg-1);
+        z-index: 980;
+    }
+
+    .nav-container-items {
+        padding-top: 5vh;
+        width: 100%;
+        align-items: center;
+    }
+}

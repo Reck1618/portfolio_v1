@@ -64,7 +64,7 @@ const Contact = () => {
     };
 
     return (
-        <div className='contact-form'>
+        <div id='contact' className='contact-form'>
             <form onSubmit={handleSubmit}>
                 <FormInput type='text' name='fullName' label='Name' onChange={handleChange} value={fullName} required />
                 <FormInput type='email' name='email' label='Email' onChange={handleChange} value={email} required />
