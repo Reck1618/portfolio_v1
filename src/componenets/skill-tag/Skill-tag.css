@@ -9,7 +9,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     cursor: default;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     gap: 0.6rem;
     box-shadow: 0px 0px 20px -10px var(--highlight-4);
 	border: 1px solid var(--highlight-6);
@@ -34,4 +34,12 @@
 
 .skill-tag:hover img {
     opacity: 1;
+}
+
+/* Mobile Settings */
+@media screen and (max-width: 768px) {
+    .skill-tag {
+        box-shadow: 0px 0px 20px -10px var(--highlight-8);
+        font-size: 1rem;
+    }
 }

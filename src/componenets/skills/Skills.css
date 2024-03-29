@@ -1,3 +1,8 @@
+#skills {
+    width: 70%;
+    height: 100%;
+    margin: 40% auto;
+}
 .skills-container {
     display: flex;
     justify-content: center;
@@ -6,16 +11,22 @@
     align-items: center;
     justify-content:center;
     height: 100%;
-    width: 70%;
+    width: 100%;
     gap: 1rem;
-    margin: 40% auto;
-    /* overflow: hidden; */
 }
 
 
 @media (max-width: 768px) {
-    .skills-container {
-        width: 100%;
+    #skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 90%;
+        height: 80vh;
         margin: auto;
+    }
+
+    .skills-container {
+        height: 80%;
     }
 }

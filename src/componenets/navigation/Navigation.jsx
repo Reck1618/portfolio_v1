@@ -23,7 +23,7 @@ const Navigation = () => {
         setActiveNavItem(item);
 
         if (isMobileView) {
-            const sectionId = item.toLowerCase();
+            const sectionId = item.toLowerCase() + '-heading';
             const section = document.getElementById(sectionId);
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth' });
@@ -97,11 +97,15 @@ const Navigation = () => {
 
                 <main>
                     <About />
+                    <div id='skills-heading' className='section-heading'>Skills</div>
                     <Skills />
+                    <div id='experience-heading' className='section-heading'>Experience</div>
                     <Experiance />
+                    <div id='projects-heading' className='section-heading'>Projects</div>
                     <Projects />
+                    <div id='contact-heading' className='section-heading'>Contact</div>
                     <Contact />
-                    <ResumeButton />
+                    {/* <ResumeButton /> */}
                 </main>
         </section>
         );

@@ -6,7 +6,7 @@ import './About.css'
 const About = () => {
 
     return (
-        <div id='about' className='about-container'>
+        <div id='about-heading' className='about-container'>
             <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

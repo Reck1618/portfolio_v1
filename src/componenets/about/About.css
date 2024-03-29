@@ -34,3 +34,26 @@
     margin: 0;
     color: var(--text-3);
 }
+
+/* Mobile Settings */
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        width: 80%;
+        padding-top: 5vh;
+        height: 95vh;
+    }
+
+    .about-container p {
+        font-size: 1.2rem;
+    }
+
+    .about-container h1 {
+        font-size: 3rem;
+    }
+
+    .about-container span {
+        font-size: 1.5rem;
+    }
+
+}
