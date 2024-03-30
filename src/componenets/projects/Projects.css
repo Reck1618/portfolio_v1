@@ -106,3 +106,18 @@
 .projects-container.fade-in {
     animation: fadeIn 0.3s ease forwards;
 } */
+
+
+/* mobile settings */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        height: 80vh;
+        width: 100vw;
+        justify-content: flex-start;
+    }
+
+    .projects-list {
+        flex-direction: column;
+        margin-top: 0;
+    }
+}

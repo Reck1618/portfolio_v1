@@ -1,4 +1,4 @@
-import {useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Projects from '../projects/Projects';
 import About from '../about/About';
@@ -15,8 +15,41 @@ import { useMobileView } from '../../contexts/MobileContext';
 const Navigation = () => {
     const [activeNavItem, setActiveNavItem] = useState('About');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     const isMobileView = useMobileView();
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['About', 'Skills', 'Experience', 'Projects', 'Contact'];
+
+            // Calculate the height of the viewport and the top half of the viewport
+            const viewportHeight = window.innerHeight;
+            const topHalfViewport = viewportHeight;
+
+            // Find the section currently in view
+            const activeSection = sections.find(section => {
+                const element = document.getElementById(section.toLowerCase() + '-heading');
+                if (element) {
+                    const elementTop = element.getBoundingClientRect().top;
+
+                    // Check if the element's top position is within the top half of the viewport
+                    return elementTop >= 0 && elementTop <= topHalfViewport;
+                }
+                return false;
+            });
+
+            if (activeSection) {
+                setActiveNavItem(activeSection);
+            }
+        };
+
+        if (isMobileView) {
+            window.addEventListener('scroll', handleScroll);
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, [isMobileView]);
 
 
     const handleNavItemClick = (item) => {
@@ -88,7 +121,6 @@ const Navigation = () => {
                                 <li onClick={() => handleNavItemClick('Experience')} className={activeNavItem === 'Experience' ? 'active' : ''}>Experience</li>
                                 <li onClick={() => handleNavItemClick('Projects')} className={activeNavItem === 'Projects' ? 'active' : ''}>Projects</li>
                                 <li onClick={() => handleNavItemClick('Contact')} className={activeNavItem === 'Contact' ? 'active' : ''}>Contact</li>
-                                <li onClick={() => handleNavItemClick('Resume')} className={activeNavItem === 'Resume' ? 'active' : ''}>Resume</li>
                             </ul>
                             <SideBar />
                         </motion.nav>
@@ -105,7 +137,6 @@ const Navigation = () => {
                     <Projects />
                     <div id='contact-heading' className='section-heading'>Contact</div>
                     <Contact />
-                    {/* <ResumeButton /> */}
                 </main>
         </section>
         );

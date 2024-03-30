@@ -8,7 +8,8 @@
       {
         "ignore": [
           "backdrop-filter",
-          "max-height: fit-content"
+          "max-height: fit-content",
+          "height: fit-content"
         ]
       }
     ]

@@ -10,7 +10,7 @@ const Projects = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSmallScreen(window.innerWidth <= 1280); // Adjust this threshold as needed
+            setIsSmallScreen(window.innerWidth <= 1280 && window.innerWidth > 768); // Adjust this threshold as needed
         };
 
         handleResize(); // Check initial screen size

@@ -56,4 +56,23 @@
 
 .contact-form form textarea {
     resize: none;
+    height: 50px;
+}
+
+
+/* mobile setting */
+
+@media screen and (max-width: 768px) {
+    .contact-form {
+        height: 80vh;
+        justify-content: flex-start;
+    }
+
+    .contact-form form {
+        width: 60%;
+    }
+
+    .contact-form form textarea {
+        height: 100px;
+    }
 }
