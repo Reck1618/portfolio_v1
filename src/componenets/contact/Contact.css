@@ -69,7 +69,11 @@
     }
 
     .contact-form form {
-        width: 60%;
+        width: 75%;
+    }
+
+    .contact-form form .form-input {
+        padding-right: 0;
     }
 
     .contact-form form textarea {
