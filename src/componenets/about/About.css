@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
-    width: 60%;
+    width: 70%;
     margin: auto;
 }
 
@@ -13,6 +13,7 @@
 }
 
 .about-container  p {
+    padding-top: 1rem;
     margin: 0;
     color: var(--highlight);
 
@@ -35,6 +36,21 @@
     color: var(--text-3);
 }
 
+.about-container .resume-button-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 0.1rem;
+}
+
+/* .about-container button {
+    margin-top: 1rem;
+} */
+
+
+
 /* Mobile Settings */
 
 @media screen and (max-width: 768px) {
@@ -45,6 +61,7 @@
     }
 
     .about-container p {
+        padding-top: 0;
         font-size: 1.2rem;
     }
 

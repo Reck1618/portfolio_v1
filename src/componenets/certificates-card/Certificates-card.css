@@ -1,0 +1,65 @@
+.certificate-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%; /* adjust this */
+    height: 100%;
+    gap: 2rem;
+    padding: 16px 18px;
+    border-radius: 5px;
+    background-color: var(--bg-1);
+    border: 1px solid var(--highlight-6);
+    box-shadow: 0px 0px 20px -10px var(--highlight-4);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.certificate-card:hover {
+    box-shadow: 0px 0px 20px -6px var(--highlight-8);
+    border: 1px solid var(--highlight-8);
+}
+
+.certificate-card-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    font-size: 1.2rem;
+    color: var(--text-2);
+    font-weight: 500;
+    transition: all 0.1s ease-in-out;
+}
+
+.certificate-card:hover  .certificate-card-heading {
+    color: var(--text-1);
+}
+
+.certificate-card:hover .certificate-card-link a {
+    color: var(--text-1);
+
+}
+
+.certificate-card-link a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-2);
+    font-size: 1.4rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.certificate-card a:hover {
+    transform: scale(1.1);
+    color: var(--highlight) !important;
+}
+
+
+/* mobile settings */
+
+@media screen and (max-width: 768px) {
+    .certificate-card {
+        width: 80%;
+    }
+}

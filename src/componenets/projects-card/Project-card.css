@@ -17,19 +17,23 @@
 	border: 1px solid var(--highlight-8);
 }
 
+.project-card:hover .project-summary {
+    color: var(--text-2);
+}
+
 .project-card-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    /* gap: 1rem; */
 }
 
 .project-heading {
     font-size: 1.5rem;
     color: var(--text-1);
     font-weight: 600;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .project-links {
@@ -56,6 +60,7 @@
     font-weight: 500;
     color: var(--text-3);
     text-align: start;
+    transition: all 0.3s ease-in-out;
 }
 
 .project-summary span {

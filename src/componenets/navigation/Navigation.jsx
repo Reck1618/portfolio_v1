@@ -5,7 +5,7 @@ import About from '../about/About';
 import Experiance from '../experience/Experiance';
 import Contact from '../contact/Contact';
 import Skills from '../skills/Skills';
-import ResumeButton from '../resume/Resume';
+import Certificates from '../certificates/Certificates';
 import Hamburger from 'hamburger-react';
 import './Navigation.css';
 import SideBar from '../../componenets/side-bar/Side-bar';
@@ -84,13 +84,13 @@ const Navigation = () => {
                 return (
                     <Projects />
                 );
+            case 'Certificates':
+                return (
+                    <Certificates />
+                );
             case 'Contact':
                 return (
                     <Contact />
-                );
-            case 'Resume':
-                return (
-                    <ResumeButton />
                 );
             default:
                 return null;
@@ -120,6 +120,7 @@ const Navigation = () => {
                                 <li onClick={() => handleNavItemClick('Skills')} className={activeNavItem === 'Skills' ? 'active' : ''}>Skills</li>
                                 <li onClick={() => handleNavItemClick('Experience')} className={activeNavItem === 'Experience' ? 'active' : ''}>Experience</li>
                                 <li onClick={() => handleNavItemClick('Projects')} className={activeNavItem === 'Projects' ? 'active' : ''}>Projects</li>
+                                <li onClick={() => handleNavItemClick('Certificates')} className={activeNavItem === 'Certificates' ? 'active' : ''}>Certificates</li>
                                 <li onClick={() => handleNavItemClick('Contact')} className={activeNavItem === 'Contact' ? 'active' : ''}>Contact</li>
                             </ul>
                             <SideBar />
@@ -135,6 +136,8 @@ const Navigation = () => {
                     <Experiance />
                     <div id='projects-heading' className='section-heading'>Projects</div>
                     <Projects />
+                    <div id='certificates-heading' className='section-heading'>Certificates</div>
+                    <Certificates />
                     <div id='contact-heading' className='section-heading'>Contact</div>
                     <Contact />
                 </main>
@@ -154,8 +157,8 @@ const Navigation = () => {
                     <li onClick={() => handleNavItemClick('Skills')} className={activeNavItem === 'Skills' ? 'active' : ''}>Skills</li>
                     <li onClick={() => handleNavItemClick('Experience')} className={activeNavItem === 'Experience' ? 'active' : ''}>Experience</li>
                     <li onClick={() => handleNavItemClick('Projects')} className={activeNavItem === 'Projects' ? 'active' : ''}>Projects</li>
+                    <li onClick={() => handleNavItemClick('Certificates')} className={activeNavItem === 'Certificates' ? 'active' : ''}>Certificates</li>
                     <li onClick={() => handleNavItemClick('Contact')} className={activeNavItem === 'Contact' ? 'active' : ''}>Contact</li>
-                    <li onClick={() => handleNavItemClick('Resume')} className={activeNavItem === 'Resume' ? 'active' : ''}>Resume</li>
                 </motion.ul>
             </nav>
             <main>

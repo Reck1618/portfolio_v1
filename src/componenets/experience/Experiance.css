@@ -75,6 +75,9 @@
 	border: 1px solid var(--highlight-8);
 }
 
+.experience-list li:hover .experience-description {
+	color: var(--text-2);
+}
 
 .experience-title {
 	font-size: 1.2rem;
@@ -98,6 +101,7 @@
 	color: var(--text-3);
 	text-align: start;
 	font-weight: 400;
+	transition: all 0.3s ease-in-out;
 }
 
 .experience-description span {
@@ -116,7 +120,7 @@
 	width: 24px;
 	aspect-ratio: 1;
 	background: var(--bg-1);
-	border: 3px solid var(--text-3);
+	border: 3px solid var(--highlight-6);
 	border-radius: 50%;
 	top: 50%;
 	transform: translate(50%, -50%);

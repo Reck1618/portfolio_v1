@@ -1,7 +1,6 @@
 import project1_img from '../assets/images/project.png';
 import aws from '../assets/svg/aws.svg';
 import Bash from '../assets/svg/bash.svg';
-import celery from '../assets/svg/celery.svg';
 import cicd from '../assets/svg/ci-cd.svg';
 import css from '../assets/svg/css.svg';
 import django from '../assets/svg/django.svg';
@@ -20,6 +19,9 @@ import restApi from '../assets/svg/rest-api.svg';
 import selenium from '../assets/svg/selenium.svg';
 import sql from '../assets/svg/sql.svg';
 import ansible from '../assets/svg/ansible.svg';
+import firebase from '../assets/svg/firebase.svg';
+// import celery from '../assets/svg/celery.svg';
+import cert from '../assets/certificate/cert.pdf';
 
 export const socials = {
     Github: 'https://github.com/Reck1618',
@@ -95,11 +97,11 @@ export const skillsData = [
         skills: [
             { 'Selenium': selenium },
             { 'MongoDB': mongo },
+            { 'Firebase': firebase },
             { 'SQL': sql },
             { 'Redis': redis },
             { 'Git': git },
             { 'Github': Github },
-            { 'Celery': celery },
             { 'CI/CD': cicd },
         ]
     }
@@ -202,5 +204,68 @@ export const projectsData = [
         { 'Nginx': nginx },
         { 'AWS': aws },
         { 'Bash': Bash }]
+    }
+];
+
+export const certificatesData = [
+    {
+        title: 'Meta Front-End Developer',
+        pdf: cert,
+        url: 'https://coursera.org/share/74ca9add98c2405b40c3cdf1c2439e26'
+    },
+    {
+        title: 'Meta Back-End Developer',
+        pdf: cert,
+        url: 'https://coursera.org/share/8f2a3c2433760f51e1b4a715ea98929e'
+    },
+    {
+        title: 'Advanced Django: Mastering Django and Django Rest Framework',
+        pdf: cert,
+        url: 'https://coursera.org/share/b8fb795eccbe432c87ad48d300a24624'
+    },
+    {
+        title: 'Django for Beginners',
+        pdf: cert,
+        url: 'https://www.google.com'
+    },
+    {
+        title: 'Django for Beginners',
+        pdf: cert,
+        url: 'https://www.google.com'
+    },
+    {
+        title: 'Django for Beginners',
+        pdf: cert,
+        url: 'https://www.google.com'
+    },
+    {
+        title: 'Django for Beginners',
+        pdf: cert,
+        url: 'https://www.google.com'
+    },
+    {
+        title: 'Django for Beginners',
+        pdf: cert,
+        url: 'https://www.google.com'
+    },
+    {
+        title: 'Django for Beginners',
+        pdf: cert,
+        url: 'https://www.google.com'
+    },
+    {
+        title: 'Django for Beginners',
+        pdf: cert,
+        url: 'https://www.google.com'
+    },
+    {
+        title: 'Django for Beginners',
+        pdf: cert,
+        url: 'https://www.google.com'
+    },
+    {
+        title: 'Django for Beginners',
+        pdf: cert,
+        url: 'https://www.google.com'
     }
 ];

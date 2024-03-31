@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { profileInfo } from '../../utils/data';
+import ResumeButton from '../resume/Resume';
 import './About.css'
 
 
@@ -34,6 +35,15 @@ const About = () => {
                 My expertise lies in crafting scalable and efficient solutions that power dynamic web applications.<br /> <br />
                 I thrive on diving deep into the intricacies of software development, constantly seeking out new technologies and methodologies to enhance my skills and stay ahead of the curve.
             </motion.span>
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1 }}
+                className='resume-button-container'
+            >
+                <ResumeButton />
+            </motion.div>
         </div>
     );
 }
