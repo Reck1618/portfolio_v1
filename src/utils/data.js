@@ -123,7 +123,14 @@ export const projectsData = [
         { 'Docker': docker },
         { 'Nginx': nginx },
         { 'AWS': aws },
-        { 'Bash': Bash }]
+        { 'Bash': Bash },
+        { 'React': react },
+        { 'Redux': redux },
+        { 'SQL': sql },
+        { 'Firebase': firebase },
+        { 'Git': git },
+        { 'Github': Github },
+        { 'CI/CD': cicd }]
     },
     {
         name: "E-commerce Website",
