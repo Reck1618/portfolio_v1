@@ -20,7 +20,7 @@ const Navigation = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['About', 'Skills', 'Experience', 'Projects', 'Contact'];
+            const sections = ['About', 'Skills', 'Experience', 'Projects', 'Certificates', 'Contact'];
 
             // Calculate the height of the viewport and the top half of the viewport
             const viewportHeight = window.innerHeight;
