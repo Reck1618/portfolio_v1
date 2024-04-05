@@ -65,11 +65,12 @@
 
 @media screen and (max-width: 768px) {
     .contact-form {
-        height: 80vh;
+        height: 70vh;
         justify-content: flex-start;
     }
 
     .contact-form form {
+        padding-top: 0;
         width: 75%;
     }
 

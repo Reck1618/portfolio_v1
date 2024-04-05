@@ -9,6 +9,7 @@ import Certificates from '../certificates/Certificates';
 import Hamburger from 'hamburger-react';
 import './Navigation.css';
 import SideBar from '../../componenets/side-bar/Side-bar';
+import MobileFooter from '../mobile-footer/Mobile-footer';
 import { useMobileView } from '../../contexts/MobileContext';
 
 
@@ -140,6 +141,7 @@ const Navigation = () => {
                     <Certificates />
                     <div id='contact-heading' className='section-heading'>Contact</div>
                     <Contact />
+                    <MobileFooter />
                 </main>
         </section>
         );
