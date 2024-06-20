@@ -1,13 +1,38 @@
 import { useState } from 'react';
 import { RxOpenInNewWindow } from "react-icons/rx";
 import { TbBrandGithub } from "react-icons/tb";
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import PropTypes from 'prop-types';
 import ProjectPopup from '../project-popup/Project-popup';
 import './Project-card.css';
 
 
 const ProjectCard = ({ project }) => {
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delay: 0.4,
+                when: 'beforeChildren',
+                staggerChildren: 0.04
+            }
+        }
+    };
+
+    const tagVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: 'spring',
+                stiffness: 150,
+                damping: 20
+            }
+        }
+    };
 
     const {name, summary, live, url, skills} = project;
     const [modalStatus, setModalStatus] = useState(false);
@@ -26,8 +51,19 @@ const ProjectCard = ({ project }) => {
 
     return (
         <>
-        <div className='project-card' onClick={toggleModal}>
-            <div className='project-card-header'>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className='project-card'
+            onClick={toggleModal}
+        >
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2}}
+                className='project-card-header'
+            >
                 <div className='project-heading'>
                     {name}
                 </div>
@@ -35,21 +71,31 @@ const ProjectCard = ({ project }) => {
                     <a href={url} target="_blank" rel="noreferrer" onClick={stopPropagation}><TbBrandGithub /></a>
                     <a href={live} target="_blank" rel="noreferrer" onClick={stopPropagation}><RxOpenInNewWindow /></a>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className='project-summary'>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4}}
+                className='project-summary'
+            >
                 {summary}
                 <span>...show more</span>
-            </div>
+            </motion.div>
 
-            <div className='project-skills'>
+            <motion.div
+                className='project-skills'
+                variants={containerVariants}
+                initial='hidden'
+                animate='visible'
+            >
                 {skills.map((skill, index) => {
                     if (index < 6) {
-                    return <span key={index}>{Object.keys(skill)[0]}</span>
+                    return <motion.span variants={tagVariants} key={index}>{Object.keys(skill)[0]}</motion.span>
                     }
                 })}
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
 
         <AnimatePresence>
             { modalStatus && <ProjectPopup project={project} onClose={handleCloseModal} /> }

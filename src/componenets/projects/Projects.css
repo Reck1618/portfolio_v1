@@ -81,32 +81,6 @@
     background-color: var(--highlight);
 }
 
-/* @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.projects-container.fade-out {
-    animation: fadeOut 0.3s ease forwards;
-}
-
-.projects-container.fade-in {
-    animation: fadeIn 0.3s ease forwards;
-} */
-
 
 /* mobile settings */
 @media screen and (max-width: 768px) {

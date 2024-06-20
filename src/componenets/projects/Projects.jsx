@@ -2,26 +2,22 @@ import ProjectCard from '../projects-card/Project-card';
 import { projectsData } from '../../utils/data';
 import { useState } from 'react';
 import { useLaptopView } from '../../contexts/LaptopContext';
+import { motion } from 'framer-motion';
 import './Projects.css';
 
 const Projects = () => {
     const [startIndex, setStartIndex] = useState(0);
-    const [isAnimating, setIsAnimating] = useState(false);
     const isLaptopScreen = useLaptopView();
 
     const handleNext = () => {
-        setIsAnimating(true);
         setTimeout(() => {
             setStartIndex(prevIndex => Math.min(prevIndex + (isLaptopScreen ? 1 : 2), projectsData.length - (isLaptopScreen ? 1 : 2)));
-            setIsAnimating(false);
         }, 200); // Adjust the duration to match the animation duration
     };
 
     const handlePrev = () => {
-        setIsAnimating(true);
         setTimeout(() => {
             setStartIndex(prevIndex => Math.max(prevIndex - (isLaptopScreen ? 1 : 2), 0));
-            setIsAnimating(false);
         }, 200); // Adjust the duration to match the animation duration
     };
 
@@ -37,10 +33,12 @@ const Projects = () => {
     return (
         <div id='projects' className='projects-container'>
 
-            <div className={`projects-list ${isAnimating ? 'fade-out' : 'fade-in'}`}>
+            <div className='projects-list'>
+
                 {projectsData.slice(startIndex, startIndex + (isLaptopScreen ? 1 : 2)).map((project, index) => (
-                    <ProjectCard key={index} project={project} />
+                        <ProjectCard key={startIndex + index} project={project} />
                 ))}
+
             </div>
             <div className='project-controls'>
                 <div className={`control-arrow ${startIndex === 0 ? 'disabled' : ''}`} onClick={handlePrev}>&#8249;</div>
