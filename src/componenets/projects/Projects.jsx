@@ -40,11 +40,16 @@ const Projects = () => {
                 ))}
 
             </div>
-            <div className='project-controls'>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1 }}
+                className='project-controls'
+            >
                 <div className={`control-arrow ${startIndex === 0 ? 'disabled' : ''}`} onClick={handlePrev}>&#8249;</div>
                 <div className='control-dots'>{dots}</div>
                 <div className={`control-arrow ${startIndex + (isLaptopScreen ? 1 : 2) >= projectsData.length ? 'disabled' : ''}`} onClick={handleNext}>&#8250;</div>
-            </div>
+            </motion.div>
 
         </div>
     );

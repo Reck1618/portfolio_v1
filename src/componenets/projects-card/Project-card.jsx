@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
         visible: {
             opacity: 1,
             transition: {
-                delay: 0.4,
+                delay: 0.6,
                 when: 'beforeChildren',
                 staggerChildren: 0.04
             }
@@ -54,14 +54,15 @@ const ProjectCard = ({ project }) => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0}}
+            transition={{ duration: 0.5, delay: 0.2}}
             className='project-card'
             onClick={toggleModal}
         >
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2}}
+                transition={{ duration: 0.5, delay: 0.4}}
                 className='project-card-header'
             >
                 <div className='project-heading'>
@@ -76,7 +77,7 @@ const ProjectCard = ({ project }) => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4}}
+                transition={{ duration: 0.5, delay: 0.6}}
                 className='project-summary'
             >
                 {summary}
