@@ -8,7 +8,7 @@ const Certificates = () => {
         <div id='certificates' className='certificates-container'>
             <div className='certificates-list'>
                 {certificatesData.map((certificate, index) => (
-                    <CertificatesCard key={index} certificate={certificate} />
+                    <CertificatesCard key={index} certificate={certificate} del={index} />
                 ))}
             </div>
         </div>
