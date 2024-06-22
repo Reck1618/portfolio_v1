@@ -20,6 +20,9 @@ jobs:
           echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
+          # Add the droplet's SSH key fingerprint to known_hosts
+          ssh-keyscan ${DROPLET_IP} >> ~/.ssh/known_hosts
+
           # Transfer the build files to the droplet
           scp -r client/dist/* ${SSH_USERNAME}@${DROPLET_IP}:/var/www/portfolio-v1/
 
