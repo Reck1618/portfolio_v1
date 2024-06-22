@@ -1,40 +1,28 @@
-name: Generate a build and push to another branch and deploy to droplet
+name: Test SSH Connection to Droplet
 
 on:
   push:
     branches:
       - master
+
 jobs:
-  build:
+  test-ssh:
     runs-on: ubuntu-latest 
-    name: Build and Deploy
+    name: Test SSH Connection
     steps:
-      - name: Deploy to Droplet
+      - name: Create SSH key and known_hosts
         env:
           DROPLET_IP: ${{ secrets.DROPLET_HOST }}
-          SSH_USERNAME: ${{ secrets.DROPLET_SSH_KEY }}
-          SSH_PRIVATE_KEY: ${{ secrets.DROPLET_USER }}
+          SSH_USERNAME: ${{ secrets.DROPLET_HOST }}
+          SSH_PRIVATE_KEY: ${{ secrets.DROPLET_SSH_KEY }}
         run: |
           # Create the SSH directory and key files
           mkdir -p ~/.ssh
-          echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_rsa
+          echo "${SSH_PRIVATE_KEY}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-
-          # Debug: Print the key file to ensure it is correct
-          cat ~/.ssh/id_rsa
 
           # Add the droplet's SSH key fingerprint to known_hosts
           ssh-keyscan ${DROPLET_IP} >> ~/.ssh/known_hosts
 
-          # Debug: List known hosts to ensure the key is added
-          cat ~/.ssh/known_hosts
-
-          # Transfer the build files to the droplet
-          scp -r client/dist/* ${SSH_USERNAME}@${DROPLET_IP}:/var/www/portfolio-v1/
-
-          # Optional: SSH into the droplet and restart the web server
-          ssh ${SSH_USERNAME}@${DROPLET_IP} << 'EOF'
-            cd /path/to/your/webroot
-            # Run any necessary commands to apply the new build, e.g., restart the web server
-            sudo systemctl restart nginx
-          EOF
+          # Test SSH connection
+          ssh -o StrictHostKeyChecking=no ${SSH_USERNAME}@${DROPLET_IP} "echo 'SSH connection successful!'"
