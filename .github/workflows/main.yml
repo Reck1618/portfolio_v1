@@ -1,0 +1,31 @@
+name: Generate a build and push to another branch and deploy to droplet
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    name: Build and Deploy
+    steps:
+      - name: Deploy to Droplet
+        env:
+          DROPLET_IP: ${{ secrets.DROPLET_HOST }}
+          SSH_USERNAME: ${{ secrets.DROPLET_SSH_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.DROPLET_USER }}
+        run: |
+          # Create the SSH directory and key files
+          mkdir -p ~/.ssh
+          echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          # Transfer the build files to the droplet
+          scp -r client/dist/* ${SSH_USERNAME}@${DROPLET_IP}:/var/www/portfolio-v1/
+
+          # Optional: SSH into the droplet and restart the web server
+          ssh ${SSH_USERNAME}@${DROPLET_IP} << 'EOF'
+            cd /path/to/your/webroot
+            # Run any necessary commands to apply the new build, e.g., restart the web server
+            sudo systemctl restart nginx
+          EOF
