@@ -26,7 +26,16 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: ./dist/
+          source: ./dist/*
           target: /var/www/portfolio-v1/
+
+      - name: Restart Nginx
+        uses: appleboy/scp-action@v0.1.5
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            sudo systemctl reload nginx
           
           
