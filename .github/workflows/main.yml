@@ -20,27 +20,20 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Archive build files with rsync
-        run: |
-          mkdir -p /tmp/build
-          rsync -avz --exclude='*.tar.gz' ./dist/ /tmp/build/
-          tar -czvf dist.tar.gz -C /tmp/build/ .
-
-      - name: Copy build files to Droplet
+      - name: Deploy to droplet
         uses: appleboy/scp-action@v0.1.5
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: "dist.tar.gz"
-          target: "/tmp/dist.tar.gz"
-
-      - name: Deploy build files on Droplet
-        uses: appleboy/ssh-action@v0.1.5
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
           script: |
-            tar -xzvf /tmp/dist.tar.gz -C /var/www/portfolio-v1/
-            sudo systemctl restart nginx
+            # Install rsync if it's not already installed
+            sudo apt update && sudo apt install -y rsync
+  
+            # Copy the build files to the droplet using rsync
+            rsync -avz --delete ./dist/ root@${{ secrets.DROPLET_HOST }}:/var/www/portfolio-v1/
+  
+            # Reload Nginx to apply changes
+            sudo systemctl reload nginx
+          
+          
