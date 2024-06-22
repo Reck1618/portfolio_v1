@@ -1,35 +1,21 @@
 name: Test SSH Connection to Droplet
 
-on:
-  push:
-    branches:
-      - master  
+on: [push]
 
 jobs:
   test-ssh:
     runs-on: ubuntu-latest 
-    name: Test SSH Connection
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Set up SSH key
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.DROPLET_SSH_KEY }}
         run: |
           mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ls -la ~/.ssh
-          cat ~/.ssh/id_rsa
-
-      - name: Add droplet to known_hosts
-        env:
-          DROPLET_IP: ${{ secrets.DROPLET_HOST }}
-        run: |
-          ssh-keyscan -H $DROPLET_IP >> ~/.ssh/known_hosts
-          cat ~/.ssh/known_hosts
+          ssh-keyscan -H ${{ secrets.DROPLET_HOST }} >> ~/.ssh/known_hosts
 
       - name: Test SSH connection
-        env:
-          DROPLET_IP: ${{ secrets.DROPLET_HOST }}
-          SSH_USERNAME: ${{ secrets.SSH_USER }}
         run: |
-          ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$DROPLET_IP "echo 'SSH connection successful!'"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.DROPLET_HOST }} "echo 'SSH connection successful!'"
