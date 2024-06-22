@@ -21,21 +21,21 @@ jobs:
         run: npm run build
 
       - name: Deploy to Droplet
+        uses: appleboy/scp-action@v0.1.5
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          source: ./dist/
+          target: /var/www/portfolio-v1
+
+      - name: Restart Nginx
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-          
-            # Install rsync if it's not already installed
-            sudo apt-get update && sudo apt-get install -y rsync
-      
-            # Copy the contents of the dist folder to the droplet using rsync
-            rsync -avz --delete ./dist/ root@${{ secrets.DROPLET_HOST }}:/var/www/portfolio-v1
-      
-            # Reload Nginx to apply changes
             sudo systemctl reload nginx
-
           
           
