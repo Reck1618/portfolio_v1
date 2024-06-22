@@ -20,10 +20,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Archive build files
+      - name: Archive build files with rsync
         run: |
-          cd dist
-          tar -czvf dist.tar.gz .
+          mkdir -p /tmp/build
+          rsync -avz --exclude='*.tar.gz' ./dist/ /tmp/build/
+          tar -czvf dist.tar.gz -C /tmp/build/ .
 
       - name: Copy build files to Droplet
         uses: appleboy/scp-action@v0.1.5
@@ -31,7 +32,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: "dist/dist.tar.gz"
+          source: "dist.tar.gz"
           target: "/tmp/dist.tar.gz"
 
       - name: Deploy build files on Droplet
