@@ -1,18 +1,45 @@
-name: Test SSH Connection to Droplet
+name: Build and Deploy to Droplet
 
 on: [push]
 
 jobs:
-  test-ssh:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Test SSH connection
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16' # Specify the Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Archive build files
+        run: |
+          cd dist
+          tar -czvf dist.tar.gz .
+
+      - name: Copy build files to Droplet
+        uses: appleboy/scp-action@v0.1.5
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "dist/dist.tar.gz"
+          target: "/tmp/dist.tar.gz"
+
+      - name: Deploy build files on Droplet
         uses: appleboy/ssh-action@v0.1.5
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          script: echo "SSH connection successful!" > /home/test.txt
+          script: |
+            tar -xzvf /tmp/dist.tar.gz -C /var/www/portfolio-v1/
+            sudo systemctl restart nginx
