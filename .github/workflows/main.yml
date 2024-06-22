@@ -1,0 +1,42 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy to Droplet
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.DROPLET_HOST }}
+        username: root
+        key: ${{ secrets.DROPLET_SSH_KEY }}
+        script: |
+          # Install rsync if it's not already installed
+          sudo apt-get update && sudo apt-get install -y rsync
+
+          # Copy the build files to the droplet using rsync
+          rsync -avz --delete ./build/ root@${{ secrets.DROPLET_HOST }}:/var/www/portfolio-v1/
+
+          # Reload Nginx to apply changes
+          sudo systemctl reload nginx
