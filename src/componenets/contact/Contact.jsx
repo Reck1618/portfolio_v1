@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import FormInput from '../form-input/Form-input';
 import ContactPopup from '../contact-popup/Contact-popup';
 import './Contact.css'
@@ -66,11 +66,17 @@ const Contact = () => {
     return (
         <div id='contact' className='contact-form'>
             <form onSubmit={handleSubmit}>
-                <FormInput type='text' name='fullName' label='Name' onChange={handleChange} value={fullName} required />
-                <FormInput type='email' name='email' label='Email' onChange={handleChange} value={email} required />
-                <FormInput type='text' name='subject' label='Subject' onChange={handleChange} value={subject} required />
-                <FormInput type='textarea' name='message' label='Message' onChange={handleChange} value={message} required />
-                <button type='submit' disabled={!isFormValid()}>Send</button>
+                <FormInput type='text' name='fullName' label='Name' del='0.2' onChange={handleChange} value={fullName} required />
+                <FormInput type='email' name='email' label='Email' del='0.3' onChange={handleChange} value={email} required />
+                <FormInput type='text' name='subject' label='Subject' del='0.4' onChange={handleChange} value={subject} required />
+                <FormInput type='textarea' name='message' label='Message' del='0.5' onChange={handleChange} value={message} required />
+                <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.6}}
+                >
+                    <button type='submit' disabled={!isFormValid()}>Send</button>
+                </motion.div>
             </form>
 
             <AnimatePresence>
