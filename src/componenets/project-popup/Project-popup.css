@@ -146,6 +146,11 @@
     font-weight: 400;
 }
 
+.content-features .content-feature-item span::before {
+    content: "• ";
+    color: var(--highlight-8);
+}
+
 .content-skills {
     display: flex;
     flex-direction: row;

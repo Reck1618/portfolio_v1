@@ -49,7 +49,7 @@ const ProjectPopup = ({project, onClose }) => {
                         <div>Features</div>
                         <div className='content-feature-item'>
                             {project.features.map((feature, index) => (
-                                <span key={index}>- {feature}</span>
+                                <span key={index}>{feature}</span>
                             ))}
                         </div>
                     </div>
