@@ -31,9 +31,9 @@ const About = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.7 }}
             >
-                A passionate <span className='highlight-text'>Full-stack developer</span> with a strong inclination towards backend technologies.<br />
-                My expertise lies in crafting scalable and efficient solutions that power dynamic web applications.<br /> <br />
-                I thrive on diving deep into the intricacies of software development, constantly seeking out new technologies and methodologies to enhance my skills and stay ahead of the curve.
+                A passionate <span className='highlight-text'>Full-stack developer</span> who loves turning cool ideas into even cooler web applications.<br />
+                Whether it's crafting sleek frontend interfaces or building powerful backend systems, I'm all about creating solutions that are both scalable and efficient.<br /> <br />
+                When I'm not coding, you'll find me exploring the latest tech trends and tinkering with new tools to keep my skills sharp.<br />
             </motion.span>
 
             <motion.div

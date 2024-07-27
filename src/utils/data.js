@@ -39,31 +39,31 @@ export const profileInfo = {
 
 export const experianceData = [
     {
-        title: 'Associate Software Engineer',
+        title: 'Software Engineer',
         company: 'Mindfire Digital',
-        duration: 'July 2022 - Present',
-        description: 'I am working as a fullstack developer at Mindfire Digital. I am responsible for developing and maintaining the web applications',
+        duration: 'April 2023 - Present',
+        description: 'Developed and deployed a Python-based web application for test automation that integrated data from multiple sources, resulting in a 25% increase in development speed and a 20% reduction in application development cost.',
         responsabilities: [
-            'Developing and maintaining the web applications',
-            'Working with the team to develop the new features',
-            'Working with the team to develop the new features',
-            'Working with the team to develop the new features',
-            'Working with the team to develop the new features',
-            'Working with the team to develop the new features'
+            'Designing, coding, testing, and documenting procedures.',
+            'Finding bugs and fixing them to ensure the software quality.',
+            'Optimizing code for performance and scalability',
+            'Constantly developing the user experience by adding new features',
+            'Analysing technical documentation, and client requirements',
+            'Participating in the development and delivery of client solutions',
         ]
     },
     {
-        title: 'Software Engineer',
+        title: 'Associate Software Engineer',
         company: 'Mindfire Digital',
-        duration: 'Jan 2022 - June 2022',
-        description: 'I am working as a fullstack developer at Mindfire Digital. I am responsible for developing and maintaining the web applications',
+        duration: 'July 2022 - March 2023',
+        description: 'Collaborated with cross-functional teams to design , develop, and maintain a RESTful API that integrated with multiple internal systems, resulting in increase in data accuracy and reduction in data retrival time.',
         responsabilities: [
-            'Developing and maintaining the web applications, Developing and maintaining the web applications',
-            'Working with the team to develop the new features',
-            'Working with the team to develop the new features',
-            'Working with the team to develop the new features',
-            'Working with the team to develop the new features',
-            'Working with the team to develop the new features'
+            'Writing high-quality code and meeting quality standards',
+            'Running and debugging existing code to determine, and solve errors',
+            'Creating technical documentation such as diagrams and flowcharts',
+            'Performing unit and integration testing',
+            'Improving the software engineering processes and practices',
+            'Learning new technologies and finding out about industry trends'
         ]
     }
 ]
@@ -110,7 +110,7 @@ export const skillsData = [
 
 export const projectsData = [
     {
-        name: "3-D Tshirt Designer",
+        name: "TestAuto",
         image: project1_img,
         summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industr hello world",
         details: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry",
