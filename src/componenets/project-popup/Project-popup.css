@@ -139,7 +139,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    height: 100%;
+    height: 80%;
     gap: 0.5rem;
     color: var(--text-3);
     font-size: 1rem;

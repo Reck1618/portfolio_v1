@@ -40,7 +40,7 @@ const ProjectPopup = ({project, onClose }) => {
                             </div>
                         </div>
                         <div className="content-details">
-                            {project.summary}
+                            {project.details}
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ const ProjectPopup = ({project, onClose }) => {
                     </div>
                     <div className='content-skills'>
                         {project.skills.map((skill, index) => (
-                            <SkillTag key={index} skill={skill} />
+                            <SkillTag key={index} skill={skill} style={{padding:'6px 8px', fontSize: '0.8rem'}} />
                         ))}
                     </div>
                 </div>
