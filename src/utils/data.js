@@ -61,14 +61,14 @@ export const experianceData = [
         title: 'Associate Software Engineer',
         company: 'Mindfire Digital',
         duration: 'July 2022 - March 2023',
-        description: 'Collaborated with cross-functional teams to design , develop, and maintain a RESTful API that integrated with multiple internal systems, resulting in increase in data accuracy and reduction in data retrival time.',
+        description: 'Collaborated with cross-functional teams to design, develop, and maintain web services and APIs that integrated with multiple internal systems, resulting in increase in data accuracy and reduction in data retrival time.',
         responsabilities: [
-            'Writing high-quality code and meeting quality standards',
-            'Running and debugging existing code to determine, and solve errors',
-            'Creating technical documentation such as diagrams and flowcharts',
-            'Performing unit and integration testing',
-            'Improving the software engineering processes and practices',
-            'Learning new technologies and finding out about industry trends'
+            'Writing high-quality code and meeting quality standards.',
+            'Running and debugging existing code to determine, and solve errors.',
+            'Creating technical documentation such as diagrams and flowcharts.',
+            'Performing unit, integration, and automation testing.',
+            'Improving the software engineering processes and practices.',
+            'Utilized source control, automation tools, and CI/CD processes.'
         ]
     }
 ]
