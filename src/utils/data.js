@@ -30,7 +30,7 @@ import cert from '../assets/certificate/cert.pdf';
 
 export const socials = {
     Github: 'https://github.com/Reck1618',
-    Linkedin: 'https://www.linkedin.com/in/ritik-tyagi-40b581226/',
+    Linkedin: 'https://www.linkedin.com/in/26-ritik-tyagi/',
     Instagram: 'https://www.instagram.com/_reck_26/',
     X: 'https://twitter.com/ritiktyagi26'
 }
