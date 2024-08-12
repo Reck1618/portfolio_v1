@@ -41,21 +41,20 @@
 
 }
 
-.certificate-card-link a {
+.certificate-card-provider {
     display: flex;
     flex-direction: row;
     align-items: center;
-    text-decoration: none;
+    gap: 0.5rem;
+    font-size: 1rem;
     color: var(--text-2);
-    font-size: 1.4rem;
+    font-weight: 600;
     transition: all 0.1s ease-in-out;
 }
 
-.certificate-card a:hover {
-    transform: scale(1.1);
-    color: var(--highlight) !important;
+.certificate-card:hover .certificate-card-provider {
+    color: var(--text-1);
 }
-
 
 /* mobile settings */
 
