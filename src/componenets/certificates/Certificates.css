@@ -19,13 +19,16 @@
     padding-bottom: 1rem;
 }
 
+
 @media  screen and (max-height: 768px) {
     .certificates-list {
-        height: 80%;
+        height: 75%;
+        width: 85%;
         padding-bottom: 0;
     }
 }
 
+/* Mobile Screen  */
 @media screen and (min-width: 768px) {
     .certificates-list::-webkit-scrollbar {
         height: 10px;

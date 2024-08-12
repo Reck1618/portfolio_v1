@@ -133,6 +133,7 @@
 	transition: all 0.3s ease-in-out;
 }
 
+/* Mobile Screen  */
 @media (min-width: 60rem) {
 	.experience-list {
 		grid-template-columns: 1fr var(--line-w) 1fr;

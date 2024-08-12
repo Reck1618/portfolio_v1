@@ -45,14 +45,15 @@
     margin-left: 0.1rem;
 }
 
-/* .about-container button {
-    margin-top: 1rem;
-} */
-
+/* Laptop Screen  */
+@media (max-height: 768px) {
+    .about-container {
+        width: 80%;
+    }
+}
 
 
 /* Mobile Settings */
-
 @media screen and (max-width: 768px) {
     .about-container {
         justify-content: start;

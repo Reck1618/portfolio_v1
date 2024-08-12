@@ -15,6 +15,12 @@
     gap: 1rem;
 }
 
+/* Laptop Screen  */
+@media (max-height: 768px) {
+    #skills {
+        width: 75%;
+    }
+}
 
 @media (max-width: 768px) {
     #skills {

@@ -18,7 +18,7 @@
 
 .sidebar-container .sidebar-icons a {
     text-decoration: none;
-    color: var(--highlight-6);
+    color: var(--highlight-8);
 }
 
 .sidebar-container .sidebar-icons a:hover {
@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: center;
     background-color: none;
-    border: 2px solid var(--highlight-6);
+    border: 2px solid var(--highlight-8);
     border-radius: 100%;
     width: 35px;
     height: 35px;
@@ -48,13 +48,13 @@
 .sidebar-container .sidebar-line.one {
     width: 2px;
     height: 100%;
-    background-color: var(--highlight-6);
+    background-color: var(--highlight-8);
 }
 
 .sidebar-container .sidebar-line.two {
     width: 2px;
     height: 40%;
-    background-color: var(--highlight-6);
+    background-color: var(--highlight-8);
 }
 
 /* .sidebar-container:hover .sidebar-line  {
