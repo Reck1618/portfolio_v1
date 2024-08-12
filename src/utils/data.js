@@ -26,11 +26,11 @@ import gcloud from '../assets/svg/gcloud.svg';
 import threejs from '../assets/svg/threejs.svg';
 import openai from '../assets/svg/openai.svg';
 import nodejs from '../assets/svg/nodejs.svg';
-import cert from '../assets/certificate/cert.pdf';
+import swagger from '../assets/svg/swagger.svg';
 
 export const socials = {
     Github: 'https://github.com/Reck1618',
-    Linkedin: 'https://www.linkedin.com/in/ritik-tyagi-40b581226/',
+    Linkedin: 'https://www.linkedin.com/in/26-ritik-tyagi',
     Instagram: 'https://www.instagram.com/_reck_26/',
     X: 'https://twitter.com/ritiktyagi26'
 }
@@ -39,7 +39,7 @@ export const profileInfo = {
     name: "Ritik Tyagi",
     role: "Fullstack Developer",
     greeting: "Hi! my name is",
-    email: "ritiktyagi1.618@gmail.com"
+    email: "ritiktyagi262000@gmail.com"
 };
 
 export const experianceData = [
@@ -80,6 +80,7 @@ export const skillsData = [
             { 'Python': python },
             { 'Django': django },
             { 'REST API': restApi },
+            { 'Swagger': swagger },
             { 'Docker': docker },
             { 'Nginx': nginx },
             { 'Ansible': ansible },
@@ -119,7 +120,7 @@ export const projectsData = [
         image: testauto_img,
         summary: "A test automation platform that streamlines execution, debugging, scheduling, and reporting with videos and screenshots. It also supports a wide range of oper",
         details: "A test automation platform that streamlines execution, debugging, scheduling, and reporting with videos and screenshots. It also supports a wide range of operating systems and devices for running tests.",
-        features: ["Execution & Debugging", "Scheduling & Reporting", "Cross-Platform Support", "Automated Email Reports", "Videos & Screenshots", "Live Test Details", "Concurrency", "Authentication", "Authorization"],
+        features: ["Execution & Debugging", "Scheduling & Reporting", "Cross-Platform Support", "Automated Email Reports", "Videos & Screenshots", "Live Test Details", "Concurrency & Queueing", "Authentication", "Authorization"],
         live: "https://automation.ritiktyagi.codes",
         url: "https://github.com/Reck1618/automation-dashboard",
         skills: [
@@ -135,20 +136,24 @@ export const projectsData = [
         { 'CI/CD': cicd }]
     },
     {
-        name: "EFashion",
+        name: "Little-Lemon API",
         image: shirt_img,
-        summary: "EFashion is a responsive e-commerce store built with React for selling clothing and other style accessories online. The site features user authentication, a ",
-        details: "EFashion is a responsive e-commerce store built with React for selling clothing and other style accessories online. The site features user authentication, a dedicated cart, payment integration, and a wishlist for a seamless shopping experience.",
-        features: ["This app has a feature", "This app has a feature", "This app has a feature"],
-        live: "https://https://ecom.ritiktyagi.codes",
-        url: "https://github.com/Reck1618/ecommerce-website-react",
-        skills: [{ 'Python': python },
+        summary: "Little Lemon is a REST API for a restaurant delivery management system built with Django and Django Rest Framework. It features user auth",
+        details: "Little Lemon is a REST API for a restaurant delivery management system built with Django and Django Rest Framework. It features menu management, order processing, delivery management, user authentication and role-based access control for a seamless experience.",
+        features: ["Menu Management", "Order Processing", "Delivery Management", "API Documentation", "Search & Filtering", "Swagger UI", "Role-based access control","Custom Permissions", "User Authentication"],
+        live: "https://lemon.ritiktyagi.codes",
+        url: "https://github.com/Reck1618/little-lemon-api",
+        skills: [
+        { 'Python': python },
         { 'Django': django },
         { 'REST API': restApi },
+        { 'Swagger': swagger },
         { 'Docker': docker },
         { 'Nginx': nginx },
         { 'AWS': aws },
-        { 'Bash': Bash }]
+        { 'Bash': Bash },
+        { 'SQL': sql },
+        { 'CI/CD': cicd }]
     },
     {
         name: "3Design",
@@ -187,67 +192,178 @@ export const projectsData = [
         { 'AWS': aws },
         ]
     },
+    // {
+    //     name: "EFashion",
+    //     image: shirt_img,
+    //     summary: "EFashion is a responsive e-commerce store built with React for selling clothing and other style accessories online. The site features user authentication, a ",
+    //     details: "EFashion is a responsive e-commerce store built with React for selling clothing and other style accessories online. The site features user authentication, a dedicated cart, payment integration, and a wishlist for a seamless shopping experience.",
+    //     features: ["This app has a feature", "This app has a feature", "This app has a feature"],
+    //     live: "https://https://ecom.ritiktyagi.codes",
+    //     url: "https://github.com/Reck1618/ecommerce-website-react",
+    //     skills: [{ 'Python': python },
+    //     { 'Django': django },
+    //     { 'REST API': restApi },
+    //     { 'Docker': docker },
+    //     { 'Nginx': nginx },
+    //     { 'AWS': aws },
+    //     { 'Bash': Bash }]
+    // },
 ];
 
 export const certificatesData = [
     {
-        title: 'Meta Front-End Developer',
-        pdf: cert,
-        url: 'https://coursera.org/share/74ca9add98c2405b40c3cdf1c2439e26'
+        title: 'Back-End Developer Specialization',
+        pdf: '/assets/certificate/META Back-End Developer.pdf',
+        provider: 'META',
     },
     {
-        title: 'Meta Back-End Developer',
-        pdf: cert,
-        url: 'https://coursera.org/share/8f2a3c2433760f51e1b4a715ea98929e'
+        title: 'Front-End Developer Specialization',
+        pdf: '/assets/certificate/META Front-End Developer.pdf',
+        provider: 'META',
     },
     {
-        title: 'Advanced Django: Mastering Django and Django Rest Framework',
-        pdf: cert,
-        url: 'https://coursera.org/share/b8fb795eccbe432c87ad48d300a24624'
+        title: 'Advanced Django Specialization',
+        pdf: '/assets/certificate/Advance Django.pdf',
+        provider: 'CODIO'
     },
     {
-        title: 'Django for Beginners',
-        pdf: cert,
-        url: 'https://www.google.com'
+        title: 'AWS Cloud Technical Essentials',
+        pdf: '/assets/certificate/AWS Cloud Technical Essentials.pdf',
+        provider: 'AWS'
     },
     {
-        title: 'Django for Beginners',
-        pdf: cert,
-        url: 'https://www.google.com'
+        title: 'Migrating to the AWS Cloud',
+        pdf: '/assets/certificate/Migrating to the AWS Cloud.pdf',
+        provider: 'AWS',
     },
     {
-        title: 'Django for Beginners',
-        pdf: cert,
-        url: 'https://www.google.com'
+        title: 'Mastering Ansible Automation',
+        pdf: '/assets/certificate/Mastering Ansible Automation.pdf',
+        provider: 'CODIO',
     },
     {
-        title: 'Django for Beginners',
-        pdf: cert,
-        url: 'https://www.google.com'
+        title: 'Unix System Basics',
+        pdf: '/assets/certificate/Unix System Basics.pdf',
+        provider: 'CODIO',
     },
     {
-        title: 'Django for Beginners',
-        pdf: cert,
-        url: 'https://www.google.com'
+        title: 'Version Control',
+        pdf: '/assets/certificate/Version Control.pdf',
+        provider: 'META',
     },
     {
-        title: 'Django for Beginners',
-        pdf: cert,
-        url: 'https://www.google.com'
+        title: 'CI-CD for Software Developers',
+        pdf: '/assets/certificate/CI-CD for Software Developers.pdf',
+        provider: 'CODIO'
     },
     {
-        title: 'Django for Beginners',
-        pdf: cert,
-        url: 'https://www.google.com'
+        title: 'Django External APIs and Task Queuing',
+        pdf: '/assets/certificate/Advanced Django: External APIs and Task Queuing.pdf',
+        provider: 'CODIO'
     },
     {
-        title: 'Django for Beginners',
-        pdf: cert,
-        url: 'https://www.google.com'
+        title: 'Programming in Python',
+        pdf: '/assets/certificate/Programming in Python.pdf',
+        provider: 'META',
     },
     {
-        title: 'Django for Beginners',
-        pdf: cert,
-        url: 'https://www.google.com'
+        title: 'Programming with JavaScript',
+        pdf: '/assets/certificate/Programming with JavaScript.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Advanced React',
+        pdf: '/assets/certificate/Advanced React.pdf',
+        provider: 'META'
+    },
+    {
+        title: 'APIs',
+        pdf: '/assets/certificate/APIs.pdf',
+        provider: 'META'
+    },
+    {
+        title: 'Advanced Django Rest Framework',
+        pdf: '/assets/certificate/Advanced Django: Advanced Django Rest Framework.pdf',
+        provider: 'CODIO'
+    },
+    {
+        title: 'Django Building a Blog',
+        pdf: '/assets/certificate/Advanced Django: Building a Blog.pdf',
+        provider: 'CODIO'
+    },
+    {
+        title: 'Introduction to Django Rest Framework',
+        pdf: '/assets/certificate/Advanced Django: Introduction to Django Rest Framework.pdf',
+        provider: 'CODIO'
+    },
+    {
+        title: 'Blockchain Basics',
+        pdf: '/assets/certificate/Blockchain Basics.pdf',
+        provider: 'UB'
+    },
+    {
+        title: 'Database Structures and Management with MySQL',
+        pdf: '/assets/certificate/Database Structures and Management with MySQL.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Django Web Framework',
+        pdf: '/assets/certificate/Django Web Framework.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Front-End Developer Capstone',
+        pdf: '/assets/certificate/Front-End Developer Capstone.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'HTML and CSS in depth',
+        pdf: '/assets/certificate/HTML and CSS in depth.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Introduction to Back-End Development',
+        pdf: '/assets/certificate/Introduction to Back-End Development.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Introduction to Databases',
+        pdf: '/assets/certificate/Introduction to Databases.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Introduction to Databases for Back-End Development',
+        pdf: '/assets/certificate/Introduction to Databases for Back-End Development.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Introduction to Front-End Development',
+        pdf: '/assets/certificate/Introduction to Front-End Development.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Principles of UX-UI Design',
+        pdf: '/assets/certificate/Principles of UX-UI Design.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Coding Interview Preparation',
+        pdf: '/assets/certificate/Coding Interview Preparation.pdf',
+        provider: 'META'
+    },
+    {
+        title: 'React Basics',
+        pdf: '/assets/certificate/React Basics.pdf',
+        provider: 'META',
+    },
+    {
+        title: 'Back-End Developer Capstone',
+        pdf: '/assets/certificate/Back-End Developer Capstone.pdf',
+        provider: 'META'
+    },
+    {
+        title: 'The Full Stack',
+        pdf: '/assets/certificate/The Full Stack.pdf',
+        provider: 'META',
     }
 ];
