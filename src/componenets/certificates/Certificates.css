@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    height: 60%;
+    height: 55%;
     overflow-y: auto;
     gap: 1.2rem;
     padding-bottom: 1rem;
@@ -57,8 +57,8 @@
 @media screen and (max-width: 768px) {
     .certificates-container{
         justify-content: flex-start;
-        width: 90%;
-        height: 80vh;
+        width: 95%;
+        height: 90vh;
     }
 
     .certificates-list {

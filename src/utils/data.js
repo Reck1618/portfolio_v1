@@ -141,8 +141,8 @@ export const projectsData = [
         summary: "Little Lemon is a REST API for a restaurant delivery management system built with Django and Django Rest Framework. It features user auth",
         details: "Little Lemon is a REST API for a restaurant delivery management system built with Django and Django Rest Framework. It features menu management, order processing, delivery management, user authentication and role-based access control for a seamless experience.",
         features: ["Menu Management", "Order Processing", "Delivery Management", "API Documentation", "Search & Filtering", "Swagger UI", "Role-based access control","Custom Permissions", "User Authentication"],
-        live: "https://lemon.ritiktyagi.codes",
-        url: "https://github.com/Reck1618/little-lemon-api",
+        live: "https://api-lemon.ritiktyagi.codes",
+        url: "https://github.com/Reck1618/Restaurant-API",
         skills: [
         { 'Python': python },
         { 'Django': django },

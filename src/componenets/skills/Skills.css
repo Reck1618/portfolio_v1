@@ -22,11 +22,13 @@
         flex-direction: column;
         justify-content: start;
         width: 90%;
-        height: 80vh;
+        min-height: 80vh;
+        height: fit-content;
         margin: auto;
     }
 
     .skills-container {
         height: 80%;
+        margin-bottom: 5vh;
     }
 }

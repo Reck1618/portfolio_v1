@@ -65,7 +65,8 @@
 
 @media screen and (max-width: 768px) {
     .contact-form {
-        height: 70vh;
+        min-height: 70vh;
+        height: fit-content;
         justify-content: flex-start;
     }
 
@@ -76,6 +77,10 @@
 
     .contact-form form .form-input {
         padding-right: 0;
+    }
+
+    .contact-form form button {
+        margin-bottom: 5vh;
     }
 
     .contact-form form textarea {
