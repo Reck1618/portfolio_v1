@@ -33,7 +33,7 @@ export const socials = {
     Github: 'https://github.com/Reck1618',
     Linkedin: 'https://www.linkedin.com/in/26-ritik-tyagi',
     Instagram: 'https://www.instagram.com/_reck_26/',
-    X: 'https://twitter.com/ritiktyagi26'
+    X: 'https://twitter.com/ritiktyagi2000'
 }
 
 export const profileInfo = {
