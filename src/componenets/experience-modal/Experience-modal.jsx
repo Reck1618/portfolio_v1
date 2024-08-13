@@ -38,7 +38,7 @@ const ExperienceModal = ({ experience, onClose }) => {
                 </div>
                 <div className='modal-experience-description'>
                     <div>Summary</div>
-                    <div className='description'>{experience.description}</div>
+                    <div className='description'>{experience.description}.</div>
                 </div>
                 <div className='modal-experience-resp'>
                     <div>Responsabilities</div>

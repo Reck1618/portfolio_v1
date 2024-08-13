@@ -116,7 +116,12 @@
 @media screen and (max-width: 768px) {
     .experience-modal {
         width: 80%;
-        max-height: 80%;
+        max-height: 90%;
         overflow-y: scroll;
+        overflow-y: hidden;
     }
+
+    .modal-experience {
+        font-weight: 300;
+      }
 }

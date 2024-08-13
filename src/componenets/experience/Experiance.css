@@ -164,8 +164,8 @@
 	}
 }
 
-/* mobile settings */
-@media screen and (max-width: 768px){
+/* Small Mobile Settings */
+@media screen and (max-height: 690px) {
 	.experience-container {
 		min-height: 80vh;
 		height: fit-content;
@@ -174,22 +174,59 @@
 		margin-bottom: auto;
 		justify-content: flex-start;
 		margin-bottom: 5vh;
+		margin-top: 0;
 	}
 
 	.experience-title {
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 
 	.experience-company {
-		font-size: 0.9rem;
+		font-size: 0.6rem;
+		font-weight: 400;
 	}
 
 	.experience-description {
-		font-size: 1.2rem;
+		font-size: 0.9rem;
 	}
 
 	.experience-description span {
-		font-weight: 200;
+		font-weight: 300;
+	}
+
+	.experience-list li .content::after {
+		border-color: var(--highlight-6);
+	}
+}
+
+/* Large Mobile Settings */
+@media screen and (max-width: 768px) and (min-height: 690px){
+	.experience-container {
+		min-height: 80vh;
+		height: fit-content;
+		width: 90%;
+		margin-left: 0;
+		margin-bottom: auto;
+		justify-content: flex-start;
+		margin-bottom: 5vh;
+		margin-top: 0;
+	}
+
+	.experience-title {
+		font-size: 1.2rem;
+	}
+
+	.experience-company {
+		font-size: 0.7rem;
+		font-weight: 400;
+	}
+
+	.experience-description {
+		font-size: 1rem;
+	}
+
+	.experience-description span {
+		font-weight: 300;
 	}
 
 	.experience-list li .content::after {

@@ -62,7 +62,6 @@
 
 
 /* mobile setting */
-
 @media screen and (max-width: 768px) {
     .contact-form {
         min-height: 70vh;
@@ -85,5 +84,12 @@
 
     .contact-form form textarea {
         height: 100px;
+    }
+
+    @media screen and (max-height: 690px) {
+        .contact-form form {
+
+        }
+
     }
 }

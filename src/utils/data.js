@@ -47,7 +47,7 @@ export const experianceData = [
         title: 'Software Engineer',
         company: 'Mindfire Digital',
         duration: 'April 2023 - Present',
-        description: 'Developed and deployed a python based web application for test automation management. In 12 weeks, improved test execution time by 40% and reduced costs by 60%. Within 6 months, provided users with a more intuitive interface, enhancing ease of use.',
+        description: 'Developed and deployed a python based web application for test automation management. In 12 weeks, improved test execution time by 40% and reduced costs by 60%. Within 6 months, provided users with a more intuitive interface, enhancing ease of use',
         responsabilities: [
             'Designing, coding, testing, and documenting procedures.',
             'Finding bugs and fixing them to ensure the software quality.',
@@ -61,7 +61,7 @@ export const experianceData = [
         title: 'Associate Software Engineer',
         company: 'Mindfire Digital',
         duration: 'July 2022 - March 2023',
-        description: 'Collaborated with cross-functional teams to design, develop, and maintain web services and APIs that integrated with multiple internal systems, resulting in increase in data accuracy and reduction in data retrival time.',
+        description: 'Collaborated with cross-functional teams to design, develop, and maintain web services and APIs that integrated with multiple internal systems, resulting in increase in data accuracy and reduction in data retrival time',
         responsabilities: [
             'Writing high-quality code and meeting quality standards.',
             'Running and debugging existing code to determine, and solve errors.',
