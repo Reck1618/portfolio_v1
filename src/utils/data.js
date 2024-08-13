@@ -1,6 +1,7 @@
 import shirt_img from '../assets/images/3dshirt.png';
 import sushi_img from '../assets/images/sushi.png';
 import testauto_img from '../assets/images/testauto.png';
+import api_img from '../assets/images/api.png';
 import aws from '../assets/svg/aws.svg';
 import Bash from '../assets/svg/bash.svg';
 import cicd from '../assets/svg/ci-cd.svg';
@@ -137,7 +138,7 @@ export const projectsData = [
     },
     {
         name: "Little-Lemon API",
-        image: shirt_img,
+        image: api_img,
         summary: "Little Lemon is a REST API for a restaurant delivery management system built with Django and Django Rest Framework. It features user auth",
         details: "Little Lemon is a REST API for a restaurant delivery management system built with Django and Django Rest Framework. It features menu management, order processing, delivery management, user authentication and role-based access control for a seamless experience.",
         features: ["Menu Management", "Order Processing", "Delivery Management", "API Documentation", "Search & Filtering", "Swagger UI", "Role-based access control","Custom Permissions", "User Authentication"],
