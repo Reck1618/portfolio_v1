@@ -232,6 +232,11 @@ export const certificatesData = [
         provider: 'AWS'
     },
     {
+        title: 'Docker for web developers',
+        pdf: '/assets/certificate/Docker.pdf',
+        provider: 'Educative'
+    },
+    {
         title: 'Migrating to the AWS Cloud',
         pdf: '/assets/certificate/Migrating to the AWS Cloud.pdf',
         provider: 'AWS',
