@@ -116,26 +116,26 @@ export const skillsData = [
 
 
 export const projectsData = [
-    // {
-    //     name: "TestAuto",
-    //     image: testauto_img,
-    //     summary: "A test automation platform that streamlines execution, debugging, scheduling, and reporting with videos and screenshots. It also supports a wide range of oper",
-    //     details: "A test automation platform that streamlines execution, debugging, scheduling, and reporting with videos and screenshots. It also supports a wide range of operating systems and devices for running tests.",
-    //     features: ["Execution & Debugging", "Scheduling & Reporting", "Cross-Platform Support", "Automated Email Reports", "Videos & Screenshots", "Live Test Details", "Concurrency & Queueing", "Authentication", "Authorization"],
-    //     live: "https://automation.ritiktyagi.codes",
-    //     url: "https://github.com/Reck1618/automation-dashboard",
-    //     skills: [
-    //     { 'Python': python },
-    //     { 'Django': django },
-    //     { 'HTML': html },
-    //     { 'CSS': css },
-    //     { 'JavaScript': js },
-    //     { 'Nginx': nginx },
-    //     { 'GCP': gcloud },
-    //     { 'SQL': sql },
-    //     { 'Redis': redis },
-    //     { 'CI/CD': cicd }]
-    // },
+    {
+        name: "TestAuto",
+        image: testauto_img,
+        summary: "A test automation platform that streamlines execution, debugging, scheduling, and reporting with videos and screenshots. It also supports a wide range of oper",
+        details: "A test automation platform that streamlines execution, debugging, scheduling, and reporting with videos and screenshots. It also supports a wide range of operating systems and devices for running tests.",
+        features: ["Execution & Debugging", "Scheduling & Reporting", "Cross-Platform Support", "Automated Email Reports", "Videos & Screenshots", "Live Test Details", "Concurrency & Queueing", "Authentication", "Authorization"],
+        live: "https://automation.ritiktyagi.codes",
+        url: "https://github.com/Reck1618/automation-dashboard",
+        skills: [
+        { 'Python': python },
+        { 'Django': django },
+        { 'HTML': html },
+        { 'CSS': css },
+        { 'JavaScript': js },
+        { 'Nginx': nginx },
+        { 'GCP': gcloud },
+        { 'SQL': sql },
+        { 'Redis': redis },
+        { 'CI/CD': cicd }]
+    },
     {
         name: "Little-Lemon API",
         image: api_img,
